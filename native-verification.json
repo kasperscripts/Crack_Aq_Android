@@ -1,5 +1,5 @@
 {
-  "library_sha256": "19b5bae9497a7848e03cc8b7f02db13557789ec5a33fe4ae66c56de6e6535870",
+  "library_sha256": "0b07bb4073414387b5cb0fdb681f1923c9e495eefb8a538b48286daef72e623a",
   "cases_passed": 12,
   "cases": [
     {
@@ -14,7 +14,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -29,7 +29,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -44,7 +44,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -59,7 +59,7 @@
       "required": 1,
       "busy": 0,
       "status": "Invalid key",
-      "error": "Invalid key",
+      "draw_ticket": "",
       "saved": [],
       "detach": 0,
       "network_calls": 0
@@ -72,7 +72,7 @@
       "required": 1,
       "busy": 0,
       "status": "Invalid key",
-      "error": "Invalid key",
+      "draw_ticket": "",
       "saved": [],
       "detach": 0,
       "network_calls": 0
@@ -85,7 +85,7 @@
       "required": 1,
       "busy": 0,
       "status": "Invalid key",
-      "error": "Invalid key",
+      "draw_ticket": "",
       "saved": [],
       "detach": 0,
       "network_calls": 0
@@ -98,7 +98,7 @@
       "required": 1,
       "busy": 0,
       "status": "Invalid key",
-      "error": "Invalid key",
+      "draw_ticket": "",
       "saved": [],
       "detach": 0,
       "network_calls": 0
@@ -111,7 +111,7 @@
       "required": 1,
       "busy": 0,
       "status": "Invalid key",
-      "error": "Invalid key",
+      "draw_ticket": "",
       "saved": [],
       "detach": 0,
       "network_calls": 0
@@ -120,7 +120,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -133,7 +133,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -146,7 +146,7 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "error": "",
+      "draw_ticket": "@Icon_Crack",
       "saved": [
         "@Icon_Crack"
       ],
@@ -155,5 +155,11 @@
       "case": "invalid-then-valid"
     }
   ],
-  "phone_tested": false
+  "phone_tested": false,
+  "real_renderer_and_menu_body_auth_guards_verified": true,
+  "previous_build_failure_reproduced": {
+    "message": "Key verified",
+    "login_hidden": true,
+    "main_menu_authorized": false
+  }
 }

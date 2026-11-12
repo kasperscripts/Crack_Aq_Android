@@ -52,11 +52,34 @@ class Android(Image):
   self.putstr(TUP+0x28,b'fixture-device')
   self.u.mem_write(BASE+0x5c8b6c,b'\x01')
   self.call(0x2c86e8,TUP)
-  state={'required':self.u.mem_read(BASE+0x5c8b6c,1)[0],'busy':self.u.mem_read(BASE+0x5c8ae8,1)[0],'status':self.string(BASE+0x5c8aa0).decode(),'error':self.string(BASE+0x5c8a88).decode(),'saved': [x.decode() for x in self.saved], 'detach':self.detach,'network_calls':len(self.network)}
+  state={'required':self.u.mem_read(BASE+0x5c8b6c,1)[0],'busy':self.u.mem_read(BASE+0x5c8ae8,1)[0],'status':self.string(BASE+0x5c8aa0).decode(),'draw_ticket':self.string(BASE+0x5c8a88).decode(),'saved': [x.decode() for x in self.saved], 'detach':self.detach,'network_calls':len(self.network)}
   return state
 
+def menu_render_guard(m):
+ # Execute the unchanged renderer's comparison against its own auth constant.
+ state=m.call(0x29b324)
+ m.u.reg_write(UC_ARM64_REG_X0,state)
+ m.u.emu_start(BASE+0x1d21b0,BASE+0x1d220c,count=100)
+ return bool(int.from_bytes(m.u.mem_read(m.u.reg_read(UC_ARM64_REG_SP)+0x18,4),'little'))
+
+def menu_body_guard(m):
+ # Run the real menu body entry, including its real state getter; stop at the
+ # first post-auth instruction or the normal rejection path before graphics.
+ seen=[]
+ def gate(u,pc,size,data):
+  seen.append(pc==BASE+0x1d2d18);u.emu_stop()
+ h1=m.u.hook_add(UC_HOOK_CODE,gate,begin=BASE+0x1d2d18,end=BASE+0x1d2d18)
+ h2=m.u.hook_add(UC_HOOK_CODE,gate,begin=BASE+0x1d6370,end=BASE+0x1d6370)
+ from native_image import STACK,STOP
+ m.u.reg_write(UC_ARM64_REG_SP,STACK);m.u.reg_write(UC_ARM64_REG_LR,STOP)
+ m.u.reg_write(UC_ARM64_REG_X0,0);m.u.reg_write(UC_ARM64_REG_X1,1920);m.u.reg_write(UC_ARM64_REG_X2,1080)
+ try:m.u.emu_start(BASE+0x1d2c6c,STOP,count=10000)
+ finally:m.u.hook_del(h1);m.u.hook_del(h2)
+ assert len(seen)==1,'menu guard did not reach a decision'
+ return seen[0]
+
 def main():
- p=argparse.ArgumentParser();p.add_argument('library',type=Path);p.add_argument('--report',type=Path);a=p.parse_args();results=[]
+ p=argparse.ArgumentParser();p.add_argument('library',type=Path);p.add_argument('--report',type=Path);p.add_argument('--previous-library',type=Path);a=p.parse_args();results=[]
  m=Android(a.library)
  # curl/runtime initialization is an unchanged platform dependency.
  m.u.hook_add(UC_HOOK_CODE,lambda u,pc,size,data:m.ret(),begin=BASE+0x36501c,end=BASE+0x36501c)
@@ -77,7 +100,10 @@ def main():
   if valid:
    assert set(m.methods.values())=={'getSharedPreferences','edit','putString','apply'}
    assert b'@Icon_Crack' in m.strings.values() and b'license_key' in m.strings.values()
-   assert m.call(0x29b324)==0x3b96d4e8f2a5c719
+   assert m.call(0x29b324)==0xa7e31f92ce4d8ba6
+   assert menu_render_guard(m) and menu_body_guard(m)
+  else:
+   assert not menu_render_guard(m) and not menu_body_guard(m)
   if valid:
    # Execute the original authentication renderer: after success it returns
    # without entering ImGui, rather than displaying a second login/spinner.
@@ -89,8 +115,12 @@ def main():
   assert s['detach']==(0 if attached else 1)
   s['case']='application-context-fallback';s['already_attached']=attached;results.append(s)
  # Failed entry followed by successful retry in the same native instance.
- m=Android(a.library);m.run(b'wrong');s=m.run(b'@Icon_Crack');assert s['required']==0 and s['error']=='' and s['busy']==0;s['case']='invalid-then-valid';results.append(s)
- report={'library_sha256':hashlib.sha256(a.library.read_bytes()).hexdigest(),'cases_passed':len(results),'cases':results,'phone_tested':False}
+ m=Android(a.library);m.run(b'wrong');s=m.run(b'@Icon_Crack');assert s['required']==0 and s['draw_ticket']=='@Icon_Crack' and s['busy']==0;s['case']='invalid-then-valid';results.append(s)
+ report={'library_sha256':hashlib.sha256(a.library.read_bytes()).hexdigest(),'cases_passed':len(results),'cases':results,'phone_tested':False,'real_renderer_and_menu_body_auth_guards_verified':True}
+ if a.previous_library:
+  old=Android(a.previous_library);state=old.run(b'@Icon_Crack')
+  assert state['required']==0 and not menu_render_guard(old) and not menu_body_guard(old)
+  report['previous_build_failure_reproduced']={'message':state['status'],'login_hidden':True,'main_menu_authorized':False}
  if a.report:a.report.write_text(json.dumps(report,indent=2)+'\n')
  print(json.dumps({'cases_passed':len(results),'library_sha256':report['library_sha256']},indent=2))
 if __name__=='__main__':main()

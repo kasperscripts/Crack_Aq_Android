@@ -1,12 +1,15 @@
 {
   "source_sha256": "3968c47fb3897d4cc676693e16f5e2c69631006c03c011497a1faf372b8b66d7",
-  "patched_sha256": "19b5bae9497a7848e03cc8b7f02db13557789ec5a33fe4ae66c56de6e6535870",
+  "patched_sha256": "0b07bb4073414387b5cb0fdb681f1923c9e495eefb8a538b48286daef72e623a",
   "library_size": 6053008,
   "auth_patch_start": "0x2c8b3c",
   "auth_patch_end": "0x2c8e00",
-  "auth_code_bytes": 360,
+  "auth_code_bytes": 356,
   "key": "@Icon_Crack",
   "telegram": "https://t.me/Icon_Crack",
   "game_code_changed": false,
-  "private_server_key_embedded": false
+  "private_server_key_embedded": false,
+  "draw_ticket_hash": "0xdc88773a7fbb0d0b",
+  "auth_state": "0xa7e31f92ce4d8ba6",
+  "menu_ticket_constant_va": "0x5b14e8"
 }

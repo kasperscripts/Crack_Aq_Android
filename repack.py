@@ -9,7 +9,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('source',type=Path);p.add_argument('payload',type=Path);p.add_argument('output',type=Path);p.add_argument('--report',type=Path,required=True);a=p.parse_args()
     assert len({x.resolve() for x in [a.source,a.payload,a.output]})==3
     with a.source.open('rb') as f:source_hash=hashlib.file_digest(f,'sha256').hexdigest()
-    assert source_hash in [SOURCE_SHA256]
+    assert source_hash in [SOURCE_SHA256,'c86417cbce75d6801fc167cf1d1c48339cfa2f265e913fb59877f856e80c28da']
     central=[];changed=[];unchanged=[]
     with zipfile.ZipFile(a.source) as src,a.source.open('rb') as inp,a.output.open('wb') as out:
         replacements={PAYLOAD:a.payload.read_bytes()}

@@ -1,13 +1,13 @@
 {
-  "original_sha256": "f3e7a0578efc652dc85c523df3bdb9e32011f19fdb2c806d5869b732b7815de4",
+  "original_sha256": "c86417cbce75d6801fc167cf1d1c48339cfa2f265e913fb59877f856e80c28da",
   "changed_entries": [
     {
       "name": "lib/arm64-v8a/libAQR.so",
       "size": 6053008,
-      "sha256": "19b5bae9497a7848e03cc8b7f02db13557789ec5a33fe4ae66c56de6e6535870"
+      "sha256": "0b07bb4073414387b5cb0fdb681f1923c9e495eefb8a538b48286daef72e623a"
     }
   ],
-  "unchanged_compressed_streams": 1751,
+  "unchanged_compressed_streams": 1750,
   "preserved_entries": [
     {
       "name": "AndroidManifest.xml",
@@ -12253,13 +12253,6 @@
       "compressed_sha256": "0e9fd935862a4dda2079ce490a7c84e5bd79a59ae46fab61fdf5357086c72439"
     },
     {
-      "name": "stamp-cert-sha256",
-      "crc32": "62d68276",
-      "size": 32,
-      "compressed_size": 35,
-      "compressed_sha256": "e809b574580db53e35477ffb488e2817e1a524677a83d06995b8a4fe89927dc5"
-    },
-    {
       "name": "user-messaging-platform.properties",
       "crc32": "e6d2669b",
       "size": 82,
@@ -12267,5 +12260,5 @@
       "compressed_sha256": "4e0e3b405622cc5e80376c32b7e08664c1d5759f1c0d650ffec5fc4609545b19"
     }
   ],
-  "unsigned_size": 2200539167
+  "unsigned_size": 2200539016
 }
