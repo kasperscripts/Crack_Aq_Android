@@ -1,0 +1,37 @@
+name: Repackage and publish AQ iOS for ESign
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download the verified previous IPA
+        run: |
+          mkdir -p work
+          gh release download aq-ios-icon-crack-v69 --pattern AQ_iOS_Icon_Crack.ipa --dir work
+      - name: Repackage as ordinary ZIP32 and compare every file
+        run: |
+          python3 ios/repack_esign.py work/AQ_iOS_Icon_Crack.ipa work/AQ_iOS_Icon_Crack_v2.ipa --report work/esign-packaging-v2.json
+      - name: Check independent extraction with minizip
+        run: |
+          if ! python3 -c "import ctypes.util; assert ctypes.util.find_library('minizip')"; then
+            sudo apt-get update -qq
+            sudo apt-get install -y libminizip1t64
+          fi
+          python3 ios/verify_minizip.py work/AQ_iOS_Icon_Crack_v2.ipa --report work/esign-packaging-v2.json
+          unzip -t work/AQ_iOS_Icon_Crack_v2.ipa | tail -1
+      - name: Publish the ESign package
+        run: |
+          gh release upload aq-ios-icon-crack-v69-v2 work/AQ_iOS_Icon_Crack_v2.ipa work/SHA256SUMS-v2 work/esign-packaging-v2.json --clobber
+          gh release edit aq-ios-icon-crack-v69-v2 --draft=false --prerelease --title 'AQ iOS V69 v2 — упаковка для ESign' --notes-file ios/release-notes-v2.md
