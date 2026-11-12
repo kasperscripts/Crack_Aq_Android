@@ -1,0 +1,62 @@
+name: Verify and publish AQ iOS V69 IPA
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Temporary download URL of the original IPA
+        required: true
+        type: string
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download and verify the original IPA
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          mkdir -p work
+          python3 - <<'PY'
+          import hashlib,json,os,shutil,urllib.request
+          from pathlib import Path
+          url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          p=Path('work/original.ipa')
+          with urllib.request.urlopen(url,timeout=180) as r,p.open('wb') as f:shutil.copyfileobj(r,f,16*1024*1024)
+          with p.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==json.loads(Path('ios/ipa-verification.json').read_text())['source_sha256']
+          print('Original IPA checksum verified')
+          PY
+      - name: Reconstruct the exact verified IPA
+        run: |
+          python3 apply_delta.py work/original.ipa artifacts/aq-ios-v69.patch work/AQ_iOS_Icon_Crack.ipa
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          with zipfile.ZipFile('work/original.ipa') as z:Path('ios/YouAreRetardBro.dylib').write_bytes(z.read('Payload/OXIDE.app/YouAreRetardBro.dylib'))
+          PY
+      - name: Install native verification dependencies
+        run: |
+          python3 -m venv work/venv
+          work/venv/bin/pip install --disable-pip-version-check -r ios/requirements.txt
+      - name: Verify both native login paths and the Telegram button
+        run: |
+          work/venv/bin/python ios/patch_ios.py
+          work/venv/bin/python ios/verify_fixed_key.py
+          work/venv/bin/python ios/verify_ui.py
+      - name: Verify all IPA contents and signing hashes
+        run: |
+          work/venv/bin/python ios/verify_ipa.py work/original.ipa work/AQ_iOS_Icon_Crack.ipa
+          unzip -t work/AQ_iOS_Icon_Crack.ipa | tail -1
+      - name: Upload and publish the single IPA
+        run: |
+          gh release upload aq-ios-icon-crack-v69 work/AQ_iOS_Icon_Crack.ipa ios/SHA256SUMS ios/ipa-verification.json ios/fixed-key-verification.json ios/ui-verification.json ios/game-address-verification.json --clobber
+          gh release edit aq-ios-icon-crack-v69 --draft=false --prerelease --title 'AQ iOS V69 — @Icon_Crack' --notes-file ios/release-notes.md

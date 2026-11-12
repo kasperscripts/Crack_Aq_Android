@@ -1,0 +1,70 @@
+{
+  "key": "@Icon_Crack",
+  "paths": [
+    {
+      "entry": "0x31268",
+      "original_success_handler": "0x383e8",
+      "fixed_key_accepted": true,
+      "incorrect_key_sent_to_original_server_path": true,
+      "ios_runtime_state": {
+        "PlayerManager_get_health": {
+          "rva": "0x50B9CA4",
+          "slots": [
+            "0x491a38"
+          ]
+        },
+        "HitBox_IsVisible": {
+          "rva": "0x4F83520",
+          "slots": [
+            "0x491a40"
+          ]
+        },
+        "Camera_get_main": {
+          "rva": "0xCBC0DC4",
+          "slots": [
+            "0x491a48"
+          ]
+        },
+        "NetworkBehaviour_get_isLocalPlayer": {
+          "rva": "0xBB9B81C",
+          "slots": [
+            "0x491a50"
+          ]
+        }
+      }
+    },
+    {
+      "entry": "0x3c76c",
+      "original_success_handler": "0x453b8",
+      "fixed_key_accepted": true,
+      "incorrect_key_sent_to_original_server_path": true,
+      "ios_runtime_state": {
+        "PlayerManager_get_health": {
+          "rva": "0x50B9CA4",
+          "slots": [
+            "0x491a38"
+          ]
+        },
+        "HitBox_IsVisible": {
+          "rva": "0x4F83520",
+          "slots": [
+            "0x491a40"
+          ]
+        },
+        "Camera_get_main": {
+          "rva": "0xCBC0DC4",
+          "slots": [
+            "0x491a48"
+          ]
+        },
+        "NetworkBehaviour_get_isLocalPlayer": {
+          "rva": "0xBB9B81C",
+          "slots": [
+            "0x491a50"
+          ]
+        }
+      }
+    }
+  ],
+  "ios_device_execution_tested": false
+}

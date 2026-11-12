@@ -1,0 +1,1850 @@
+[
+  {
+    "address": "0x3e8a50",
+    "flags": "0x7c8",
+    "data": "0x3ca4b5",
+    "length": 11,
+    "value": "Preferences"
+  },
+  {
+    "address": "0x3e8a70",
+    "flags": "0x7c8",
+    "data": "0x3ca4c1",
+    "length": 13,
+    "value": "BDC_DEVICE_ID"
+  },
+  {
+    "address": "0x3e8a90",
+    "flags": "0x7c8",
+    "data": "0x3ca4cf",
+    "length": 7,
+    "value": "Success"
+  },
+  {
+    "address": "0x3e8ab0",
+    "flags": "0x7c8",
+    "data": "0x3ca4d7",
+    "length": 79,
+    "value": "Device unblocked successfully, the program will automatically exit in 5 seconds"
+  },
+  {
+    "address": "0x3e8ad0",
+    "flags": "0x7c8",
+    "data": "0x3ca52d",
+    "length": 7,
+    "value": "Failure"
+  },
+  {
+    "address": "0x3e8af0",
+    "flags": "0x7c8",
+    "data": "0x3ca535",
+    "length": 41,
+    "value": "Device unblock failed, please click again"
+  },
+  {
+    "address": "0x3e8b10",
+    "flags": "0x7c8",
+    "data": "0x3ca55f",
+    "length": 35,
+    "value": "com.herogame.ios.lastdayrules.plist"
+  },
+  {
+    "address": "0x3e8b30",
+    "flags": "0x7c8",
+    "data": "0x3ca583",
+    "length": 24,
+    "value": "multi header mapping! %s"
+  },
+  {
+    "address": "0x3e8b50",
+    "flags": "0x7c8",
+    "data": "0x3ca59c",
+    "length": 15,
+    "value": "header_vaddr=%p"
+  },
+  {
+    "address": "0x3e8b70",
+    "flags": "0x7c8",
+    "data": "0x3ca5ac",
+    "length": 19,
+    "value": "vaddr=%p offset=%p\n"
+  },
+  {
+    "address": "0x3e8b90",
+    "flags": "0x7c8",
+    "data": "0x3ca5c0",
+    "length": 29,
+    "value": "add_hook_section nfat_arch=%d"
+  },
+  {
+    "address": "0x3e8bb0",
+    "flags": "0x7c8",
+    "data": "0x3ca5de",
+    "length": 24,
+    "value": "macho has too many arch!"
+  },
+  {
+    "address": "0x3e8bd0",
+    "flags": "0x7c8",
+    "data": "0x3ca5f7",
+    "length": 23,
+    "value": "macho arch not support!"
+  },
+  {
+    "address": "0x3e8bf0",
+    "flags": "0x7c8",
+    "data": "0x3ca60f",
+    "length": 13,
+    "value": "subarch=%x %x"
+  },
+  {
+    "address": "0x3e8c10",
+    "flags": "0x7c8",
+    "data": "0x3ca61d",
+    "length": 18,
+    "value": "macho nfat_arch=%d"
+  },
+  {
+    "address": "0x3e8c30",
+    "flags": "0x7c8",
+    "data": "0x3ca630",
+    "length": 11,
+    "value": "macho %x %x"
+  },
+  {
+    "address": "0x3e8c50",
+    "flags": "0x7c8",
+    "data": "0x3ca63c",
+    "length": 17,
+    "value": "macho load cmd=%d"
+  },
+  {
+    "address": "0x3e8c70",
+    "flags": "0x7c8",
+    "data": "0x3ca64e",
+    "length": 32,
+    "value": "segment: %s file=%x:%x vm=%p:%p\n"
+  },
+  {
+    "address": "0x3e8c90",
+    "flags": "0x7c8",
+    "data": "0x3ca66f",
+    "length": 38,
+    "value": "section[%d] = %s/%s offset=%x vm=%p:%p"
+  },
+  {
+    "address": "0x3e8cb0",
+    "flags": "0x7c8",
+    "data": "0x3ca696",
+    "length": 24,
+    "value": "cannot parse macho file!"
+  },
+  {
+    "address": "0x3e8cd0",
+    "flags": "0x7c8",
+    "data": "0x3ca6af",
+    "length": 31,
+    "value": "min_section_offset=%x vm_end=%p"
+  },
+  {
+    "address": "0x3e8cf0",
+    "flags": "0x7c8",
+    "data": "0x3ca6cf",
+    "length": 57,
+    "value": "[iOS27] chained-fixups resized: seg_count %d->%d, blob +8"
+  },
+  {
+    "address": "0x3e8d10",
+    "flags": "0x7c8",
+    "data": "0x3ca709",
+    "length": 27,
+    "value": "[-] fix LC_DYLD_INFO_ done\n"
+  },
+  {
+    "address": "0x3e8d30",
+    "flags": "0x7c8",
+    "data": "0x3ca725",
+    "length": 23,
+    "value": "[-] fix LC_SYMTAB done\n"
+  },
+  {
+    "address": "0x3e8d50",
+    "flags": "0x7c8",
+    "data": "0x3ca73d",
+    "length": 25,
+    "value": "[-] fix LC_DYSYMTAB done\n"
+  },
+  {
+    "address": "0x3e8d70",
+    "flags": "0x7c8",
+    "data": "0x3ca757",
+    "length": 35,
+    "value": "[-] fix linkedit_data_command done\n"
+  },
+  {
+    "address": "0x3e8d90",
+    "flags": "0x7c8",
+    "data": "0x3ca77b",
+    "length": 33,
+    "value": "macho header has no enough space!"
+  },
+  {
+    "address": "0x3e8db0",
+    "flags": "0x7c8",
+    "data": "0x3ca79d",
+    "length": 18,
+    "value": "macho file size=%x"
+  },
+  {
+    "address": "0x3e8dd0",
+    "flags": "0x7c8",
+    "data": "0x3ca7b0",
+    "length": 45,
+    "value": "???[can't find file):\n Documents/hackkkkne/%s"
+  },
+  {
+    "address": "0x3e8df0",
+    "flags": "0x7c8",
+    "data": "0x3ca7de",
+    "length": 30,
+    "value": "????[can't read file):\n.app/%s"
+  },
+  {
+    "address": "0x3e8e10",
+    "flags": "0x7c8",
+    "data": "0x3ca7fd",
+    "length": 19,
+    "value": "hook section found!"
+  },
+  {
+    "address": "0x3e8e30",
+    "flags": "0x7c8",
+    "data": "0x3ca811",
+    "length": 23,
+    "value": "add_hook_section error!"
+  },
+  {
+    "address": "0x3e8e50",
+    "flags": "0x7c8",
+    "data": "0x3ca829",
+    "length": 35,
+    "value": "?app???|\nthis app is not decrypted!"
+  },
+  {
+    "address": "0x3e8e70",
+    "flags": "0x7c8",
+    "data": "0x3ca84d",
+    "length": 36,
+    "value": "????machO|\ncan not parse machO file!"
+  },
+  {
+    "address": "0x3e8e90",
+    "flags": "0x7c8",
+    "data": "0x3ca872",
+    "length": 20,
+    "value": "???|\nInvalid offset!"
+  },
+  {
+    "address": "0x3e8eb0",
+    "flags": "0x7c8",
+    "data": "0x3ca887",
+    "length": 28,
+    "value": "codepath %p %s : %p~%p~%p %x"
+  },
+  {
+    "address": "0x3e8ed0",
+    "flags": "0x7c8",
+    "data": "0x3ca8a4",
+    "length": 42,
+    "value": "???????|\nThe bytes to patch are incorrect!"
+  },
+  {
+    "address": "0x3e8ef0",
+    "flags": "0x7c8",
+    "data": "0x3ca8cf",
+    "length": 31,
+    "value": "???|\nThe offset is not aligned!"
+  },
+  {
+    "address": "0x3e8f10",
+    "flags": "0x7c8",
+    "data": "0x3ca8ef",
+    "length": 97,
+    "value": "????????, ????????|\nThe bytes to patch have changed, please revert to original file and try again"
+  },
+  {
+    "address": "0x3e8f30",
+    "flags": "0x7c8",
+    "data": "0x3ca951",
+    "length": 245,
+    "value": "??????, ??APP?Documents/static-inline-hook???????????ipa??.app???????|\nThe offset is already patched! Please replace the patched file in the APP's Documents/static-inline-hook directory to the .app directory in the ipa and re-sign and reinstall!"
+  },
+  {
+    "address": "0x3e8f50",
+    "flags": "0x7c8",
+    "data": "0x3caa47",
+    "length": 48,
+    "value": "?HOOK???|\nThe offset to hook is already patched!"
+  },
+  {
+    "address": "0x3e8f70",
+    "flags": "0x7c8",
+    "data": "0x3caa78",
+    "length": 30,
+    "value": "?????|\nThe offset is occupied!"
+  },
+  {
+    "address": "0x3e8f90",
+    "flags": "0x7c8",
+    "data": "0x3caa97",
+    "length": 44,
+    "value": "found empty StaticInlineHookBlock %d %p=>%p\n"
+  },
+  {
+    "address": "0x3e8fb0",
+    "flags": "0x7c8",
+    "data": "0x3caac4",
+    "length": 24,
+    "value": "??????|\nHOOK count full!"
+  },
+  {
+    "address": "0x3e8fd0",
+    "flags": "0x7c8",
+    "data": "0x3caadd",
+    "length": 28,
+    "value": "func: %p=>%p target: %p=>%p\n"
+  },
+  {
+    "address": "0x3e8ff0",
+    "flags": "0x7c8",
+    "data": "0x3caafa",
+    "length": 31,
+    "value": "?????|\ncan not patch the offset"
+  },
+  {
+    "address": "0x3e9010",
+    "flags": "0x7c8",
+    "data": "0x3cab1a",
+    "length": 21,
+    "value": "%@/Documents/AQREH/%s"
+  },
+  {
+    "address": "0x3e9030",
+    "flags": "0x7c8",
+    "data": "0x3cab30",
+    "length": 28,
+    "value": "????|\ncan not write to file!"
+  },
+  {
+    "address": "0x3e9050",
+    "flags": "0x7c8",
+    "data": "0x3cab4d",
+    "length": 316,
+    "value": "??????, ????????APP?Documents/static-inline-hook???, ?????????????ipa??.app???????|\nThe offset has not been patched, the patched file will be generated in the Documents/static-inline-hook directory of the APP, please replace all the files in this directory to the .app directory in the ipa and re-sign and reinstall!"
+  },
+  {
+    "address": "0x3e9070",
+    "flags": "0x7c8",
+    "data": "0x3cac8a",
+    "length": 23,
+    "value": "cannot parse hook info!"
+  },
+  {
+    "address": "0x3e9090",
+    "flags": "0x7c8",
+    "data": "0x3caca2",
+    "length": 22,
+    "value": "%p cannot find module!"
+  },
+  {
+    "address": "0x3e90b0",
+    "flags": "0x7c8",
+    "data": "0x3cacb9",
+    "length": 26,
+    "value": "%p cannot find hook block!"
+  },
+  {
+    "address": "0x3e90d0",
+    "flags": "0x7c8",
+    "data": "0x3cacd4",
+    "length": 28,
+    "value": "%p code patch bytes changed!"
+  },
+  {
+    "address": "0x3e90f0",
+    "flags": "0x7c8",
+    "data": "0x3cacf1",
+    "length": 7,
+    "value": "%@: %@\n"
+  },
+  {
+    "address": "0x3e9110",
+    "flags": "0x7c8",
+    "data": "0x3cacf9",
+    "length": 62,
+    "value": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  },
+  {
+    "address": "0x3e9130",
+    "flags": "0x7c8",
+    "data": "0x3cad38",
+    "length": 2,
+    "value": "%C"
+  },
+  {
+    "address": "0x3e9150",
+    "flags": "0x7c8",
+    "data": "0x3cad3b",
+    "length": 4,
+    "value": "%02x"
+  },
+  {
+    "address": "0x3e9170",
+    "flags": "0x7c8",
+    "data": "0x3cad40",
+    "length": 4,
+    "value": "farm"
+  },
+  {
+    "address": "0x3e9190",
+    "flags": "0x7c8",
+    "data": "0x3cad45",
+    "length": 6,
+    "value": "camera"
+  },
+  {
+    "address": "0x3e91b0",
+    "flags": "0x7c8",
+    "data": "0x3cad4c",
+    "length": 2,
+    "value": "up"
+  },
+  {
+    "address": "0x3e91d0",
+    "flags": "0x7c8",
+    "data": "0x3cad4f",
+    "length": 4,
+    "value": "down"
+  },
+  {
+    "address": "0x3e91f0",
+    "flags": "0x7c8",
+    "data": "0x3cad54",
+    "length": 9,
+    "value": "crosshair"
+  },
+  {
+    "address": "0x3e9210",
+    "flags": "0x7c8",
+    "data": "0x3cad5e",
+    "length": 3,
+    "value": "fly"
+  },
+  {
+    "address": "0x3e9230",
+    "flags": "0x7c8",
+    "data": "0x3cad62",
+    "length": 26,
+    "value": "-----BEGIN PUBLIC KEY-----"
+  },
+  {
+    "address": "0x3e9250",
+    "flags": "0x7c8",
+    "data": "0x3cad7d",
+    "length": 0,
+    "value": ""
+  },
+  {
+    "address": "0x3e9270",
+    "flags": "0x7c8",
+    "data": "0x3cad7e",
+    "length": 24,
+    "value": "-----END PUBLIC KEY-----"
+  },
+  {
+    "address": "0x3e9290",
+    "flags": "0x7c8",
+    "data": "0x3cad97",
+    "length": 1,
+    "value": "\n"
+  },
+  {
+    "address": "0x3e92b0",
+    "flags": "0x7c8",
+    "data": "0x3cad99",
+    "length": 15,
+    "value": "aqreh-hack.site"
+  },
+  {
+    "address": "0x3e92d0",
+    "flags": "0x7c8",
+    "data": "0x3cada9",
+    "length": 5,
+    "value": "https"
+  },
+  {
+    "address": "0x3e92f0",
+    "flags": "0x7c8",
+    "data": "0x3cadaf",
+    "length": 1,
+    "value": "."
+  },
+  {
+    "address": "0x3e9310",
+    "flags": "0x7c8",
+    "data": "0x3cadb1",
+    "length": 3,
+    "value": "%lu"
+  },
+  {
+    "address": "0x3e9330",
+    "flags": "0x7c8",
+    "data": "0x3cadb5",
+    "length": 44,
+    "value": "Obfuscated name not found for method ID: %lu"
+  },
+  {
+    "address": "0x3e9350",
+    "flags": "0x7c8",
+    "data": "0x3cade2",
+    "length": 52,
+    "value": "Instance does not respond to obfuscated selector: %@"
+  },
+  {
+    "address": "0x3e9370",
+    "flags": "0x7c8",
+    "data": "0x3cae17",
+    "length": 30,
+    "value": "Method ID %lu obfuscated to %@"
+  },
+  {
+    "address": "0x3e9390",
+    "flags": "0x7c8",
+    "data": "0x3cae36",
+    "length": 43,
+    "value": "Failed to add obfuscated method for ID: %lu"
+  },
+  {
+    "address": "0x3e93b0",
+    "flags": "0x7c8",
+    "data": "0x3cae62",
+    "length": 40,
+    "value": "Obfuscated name not found for method: %@"
+  },
+  {
+    "address": "0x3e93d0",
+    "flags": "0x7c8",
+    "data": "0x3cae8b",
+    "length": 4,
+    "value": "0xDA"
+  },
+  {
+    "address": "0x3e93f0",
+    "flags": "0x7c8",
+    "data": "0x3caea6",
+    "length": 4,
+    "value": "0xDF"
+  },
+  {
+    "address": "0x3e9410",
+    "flags": "0x7c8",
+    "data": "0x3caeab",
+    "length": 4,
+    "value": "0xDE"
+  },
+  {
+    "address": "0x3e9430",
+    "flags": "0x7c8",
+    "data": "0x3caeb0",
+    "length": 20,
+    "value": "showAlertWithMessage"
+  },
+  {
+    "address": "0x3e9450",
+    "flags": "0x7c8",
+    "data": "0x3caec5",
+    "length": 46,
+    "value": "Calling obfuscated method %@ with argument: %@"
+  },
+  {
+    "address": "0x3e9470",
+    "flags": "0x7c8",
+    "data": "0x3caef4",
+    "length": 4,
+    "value": "0xAE"
+  },
+  {
+    "address": "0x3e9490",
+    "flags": "0x7c8",
+    "data": "0x3caef9",
+    "length": 4,
+    "value": "0x4E"
+  },
+  {
+    "address": "0x3e94b0",
+    "flags": "0x7c8",
+    "data": "0x3caefe",
+    "length": 26,
+    "value": "Method %@ obfuscated to %@"
+  },
+  {
+    "address": "0x3e94d0",
+    "flags": "0x7c8",
+    "data": "0x3caf19",
+    "length": 4,
+    "value": "0xBB"
+  },
+  {
+    "address": "0x3e94f0",
+    "flags": "0x7c8",
+    "data": "0x3caf1e",
+    "length": 38,
+    "value": "Failed to add obfuscated method for %@"
+  },
+  {
+    "address": "0x3e9510",
+    "flags": "0x7c8",
+    "data": "0x3caf5e",
+    "length": 30,
+    "value": "Block invoked with message: %@"
+  },
+  {
+    "address": "0x3e9530",
+    "flags": "0x7c8",
+    "data": "0x3caf7d",
+    "length": 4,
+    "value": "0x4A"
+  },
+  {
+    "address": "0x3e9550",
+    "flags": "0x7c8",
+    "data": "0x3caf95",
+    "length": 4,
+    "value": "0xDD"
+  },
+  {
+    "address": "0x3e9570",
+    "flags": "0x7c8",
+    "data": "0x3caf9a",
+    "length": 4,
+    "value": "0xEF"
+  },
+  {
+    "address": "0x3e9590",
+    "flags": "0x7c8",
+    "data": "0x3caf9f",
+    "length": 5,
+    "value": "ImGui"
+  },
+  {
+    "address": "0x3e95b0",
+    "flags": "0x7c8",
+    "data": "0x3cafa5",
+    "length": 8,
+    "value": "%@****%@"
+  },
+  {
+    "address": "0x3e95d0",
+    "flags": "0x7c8",
+    "data": "0x3cafae",
+    "length": 11,
+    "value": "Guest Reset"
+  },
+  {
+    "address": "0x3e95f0",
+    "flags": "0x7c8",
+    "data": "0x3cafba",
+    "length": 63,
+    "value": "Guest account reset successful!\nGame will close in 3 seconds..."
+  },
+  {
+    "address": "0x3e9610",
+    "flags": "0x7c8",
+    "data": "0x3caffa",
+    "length": 26,
+    "value": "%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@"
+  },
+  {
+    "address": "0x3e9630",
+    "flags": "0x7c8",
+    "data": "0x3cb015",
+    "length": 23,
+    "value": "%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@"
+  },
+  {
+    "address": "0x3e9650",
+    "flags": "0x7c8",
+    "data": "0x3cb02d",
+    "length": 24,
+    "value": "PlayerManager_get_health"
+  },
+  {
+    "address": "0x3e9670",
+    "flags": "0x7c8",
+    "data": "0x3cb046",
+    "length": 16,
+    "value": "HitBox_IsVisible"
+  },
+  {
+    "address": "0x3e9690",
+    "flags": "0x7c8",
+    "data": "0x3cb057",
+    "length": 15,
+    "value": "Camera_get_main"
+  },
+  {
+    "address": "0x3e96b0",
+    "flags": "0x7c8",
+    "data": "0x3cb067",
+    "length": 34,
+    "value": "NetworkBehaviour_get_isLocalPlayer"
+  },
+  {
+    "address": "0x3e96d0",
+    "flags": "0x7c8",
+    "data": "0x3cb08a",
+    "length": 2,
+    "value": "0x"
+  },
+  {
+    "address": "0x3e96f0",
+    "flags": "0x7c8",
+    "data": "0x3cb08d",
+    "length": 2,
+    "value": "0X"
+  },
+  {
+    "address": "0x3e9710",
+    "flags": "0x7c8",
+    "data": "0x3cb090",
+    "length": 14,
+    "value": "config_version"
+  },
+  {
+    "address": "0x3e9730",
+    "flags": "0x7c8",
+    "data": "0x3cb09f",
+    "length": 53,
+    "value": "[ConfigManager] No saved config found, using defaults"
+  },
+  {
+    "address": "0x3e9750",
+    "flags": "0x7c8",
+    "data": "0x3cb0d5",
+    "length": 9,
+    "value": "esp_style"
+  },
+  {
+    "address": "0x3e9770",
+    "flags": "0x7c8",
+    "data": "0x3cb0df",
+    "length": 10,
+    "value": "esp_enable"
+  },
+  {
+    "address": "0x3e9790",
+    "flags": "0x7c8",
+    "data": "0x3cb0ea",
+    "length": 9,
+    "value": "esp_lines"
+  },
+  {
+    "address": "0x3e97b0",
+    "flags": "0x7c8",
+    "data": "0x3cb0f4",
+    "length": 7,
+    "value": "esp_box"
+  },
+  {
+    "address": "0x3e97d0",
+    "flags": "0x7c8",
+    "data": "0x3cb0fc",
+    "length": 8,
+    "value": "esp_name"
+  },
+  {
+    "address": "0x3e97f0",
+    "flags": "0x7c8",
+    "data": "0x3cb105",
+    "length": 12,
+    "value": "esp_distance"
+  },
+  {
+    "address": "0x3e9810",
+    "flags": "0x7c8",
+    "data": "0x3cb112",
+    "length": 10,
+    "value": "esp_health"
+  },
+  {
+    "address": "0x3e9830",
+    "flags": "0x7c8",
+    "data": "0x3cb11d",
+    "length": 12,
+    "value": "esp_skeleton"
+  },
+  {
+    "address": "0x3e9850",
+    "flags": "0x7c8",
+    "data": "0x3cb12a",
+    "length": 8,
+    "value": "esp_clan"
+  },
+  {
+    "address": "0x3e9870",
+    "flags": "0x7c8",
+    "data": "0x3cb133",
+    "length": 13,
+    "value": "esp_weapon_id"
+  },
+  {
+    "address": "0x3e9890",
+    "flags": "0x7c8",
+    "data": "0x3cb141",
+    "length": 15,
+    "value": "esp_weapon_icon"
+  },
+  {
+    "address": "0x3e98b0",
+    "flags": "0x7c8",
+    "data": "0x3cb151",
+    "length": 9,
+    "value": "esp_count"
+  },
+  {
+    "address": "0x3e98d0",
+    "flags": "0x7c8",
+    "data": "0x3cb15b",
+    "length": 13,
+    "value": "esp_offscreen"
+  },
+  {
+    "address": "0x3e98f0",
+    "flags": "0x7c8",
+    "data": "0x3cb169",
+    "length": 15,
+    "value": "esp_ignore_team"
+  },
+  {
+    "address": "0x3e9910",
+    "flags": "0x7c8",
+    "data": "0x3cb179",
+    "length": 16,
+    "value": "esp_max_distance"
+  },
+  {
+    "address": "0x3e9930",
+    "flags": "0x7c8",
+    "data": "0x3cb18a",
+    "length": 17,
+    "value": "esp_visible_check"
+  },
+  {
+    "address": "0x3e9950",
+    "flags": "0x7c8",
+    "data": "0x3cb19c",
+    "length": 11,
+    "value": "esp_tracers"
+  },
+  {
+    "address": "0x3e9970",
+    "flags": "0x7c8",
+    "data": "0x3cb1a8",
+    "length": 15,
+    "value": "esp_hit_markers"
+  },
+  {
+    "address": "0x3e9990",
+    "flags": "0x7c8",
+    "data": "0x3cb1b8",
+    "length": 16,
+    "value": "esp_line_color_r"
+  },
+  {
+    "address": "0x3e99b0",
+    "flags": "0x7c8",
+    "data": "0x3cb1c9",
+    "length": 16,
+    "value": "esp_line_color_g"
+  },
+  {
+    "address": "0x3e99d0",
+    "flags": "0x7c8",
+    "data": "0x3cb1da",
+    "length": 16,
+    "value": "esp_line_color_b"
+  },
+  {
+    "address": "0x3e99f0",
+    "flags": "0x7c8",
+    "data": "0x3cb1eb",
+    "length": 16,
+    "value": "esp_line_color_a"
+  },
+  {
+    "address": "0x3e9a10",
+    "flags": "0x7c8",
+    "data": "0x3cb1fc",
+    "length": 15,
+    "value": "esp_box_color_r"
+  },
+  {
+    "address": "0x3e9a30",
+    "flags": "0x7c8",
+    "data": "0x3cb20c",
+    "length": 15,
+    "value": "esp_box_color_g"
+  },
+  {
+    "address": "0x3e9a50",
+    "flags": "0x7c8",
+    "data": "0x3cb21c",
+    "length": 15,
+    "value": "esp_box_color_b"
+  },
+  {
+    "address": "0x3e9a70",
+    "flags": "0x7c8",
+    "data": "0x3cb22c",
+    "length": 15,
+    "value": "esp_box_color_a"
+  },
+  {
+    "address": "0x3e9a90",
+    "flags": "0x7c8",
+    "data": "0x3cb23c",
+    "length": 16,
+    "value": "esp_name_color_r"
+  },
+  {
+    "address": "0x3e9ab0",
+    "flags": "0x7c8",
+    "data": "0x3cb24d",
+    "length": 16,
+    "value": "esp_name_color_g"
+  },
+  {
+    "address": "0x3e9ad0",
+    "flags": "0x7c8",
+    "data": "0x3cb25e",
+    "length": 16,
+    "value": "esp_name_color_b"
+  },
+  {
+    "address": "0x3e9af0",
+    "flags": "0x7c8",
+    "data": "0x3cb26f",
+    "length": 16,
+    "value": "esp_name_color_a"
+  },
+  {
+    "address": "0x3e9b10",
+    "flags": "0x7c8",
+    "data": "0x3cb280",
+    "length": 13,
+    "value": "esp_name_bg_r"
+  },
+  {
+    "address": "0x3e9b30",
+    "flags": "0x7c8",
+    "data": "0x3cb28e",
+    "length": 13,
+    "value": "esp_name_bg_g"
+  },
+  {
+    "address": "0x3e9b50",
+    "flags": "0x7c8",
+    "data": "0x3cb29c",
+    "length": 13,
+    "value": "esp_name_bg_b"
+  },
+  {
+    "address": "0x3e9b70",
+    "flags": "0x7c8",
+    "data": "0x3cb2aa",
+    "length": 17,
+    "value": "esp_arrow_color_r"
+  },
+  {
+    "address": "0x3e9b90",
+    "flags": "0x7c8",
+    "data": "0x3cb2bc",
+    "length": 17,
+    "value": "esp_arrow_color_g"
+  },
+  {
+    "address": "0x3e9bb0",
+    "flags": "0x7c8",
+    "data": "0x3cb2ce",
+    "length": 17,
+    "value": "esp_arrow_color_b"
+  },
+  {
+    "address": "0x3e9bd0",
+    "flags": "0x7c8",
+    "data": "0x3cb2e0",
+    "length": 17,
+    "value": "esp_arrow_color_a"
+  },
+  {
+    "address": "0x3e9bf0",
+    "flags": "0x7c8",
+    "data": "0x3cb2f2",
+    "length": 9,
+    "value": "world_box"
+  },
+  {
+    "address": "0x3e9c10",
+    "flags": "0x7c8",
+    "data": "0x3cb2fc",
+    "length": 14,
+    "value": "world_cupboard"
+  },
+  {
+    "address": "0x3e9c30",
+    "flags": "0x7c8",
+    "data": "0x3cb30b",
+    "length": 12,
+    "value": "world_barrel"
+  },
+  {
+    "address": "0x3e9c50",
+    "flags": "0x7c8",
+    "data": "0x3cb318",
+    "length": 9,
+    "value": "world_ore"
+  },
+  {
+    "address": "0x3e9c70",
+    "flags": "0x7c8",
+    "data": "0x3cb322",
+    "length": 10,
+    "value": "world_tree"
+  },
+  {
+    "address": "0x3e9c90",
+    "flags": "0x7c8",
+    "data": "0x3cb32d",
+    "length": 12,
+    "value": "world_animal"
+  },
+  {
+    "address": "0x3e9cb0",
+    "flags": "0x7c8",
+    "data": "0x3cb33a",
+    "length": 9,
+    "value": "world_bot"
+  },
+  {
+    "address": "0x3e9cd0",
+    "flags": "0x7c8",
+    "data": "0x3cb344",
+    "length": 12,
+    "value": "world_turret"
+  },
+  {
+    "address": "0x3e9cf0",
+    "flags": "0x7c8",
+    "data": "0x3cb351",
+    "length": 13,
+    "value": "world_airdrop"
+  },
+  {
+    "address": "0x3e9d10",
+    "flags": "0x7c8",
+    "data": "0x3cb35f",
+    "length": 14,
+    "value": "world_distance"
+  },
+  {
+    "address": "0x3e9d30",
+    "flags": "0x7c8",
+    "data": "0x3cb36e",
+    "length": 18,
+    "value": "world_max_distance"
+  },
+  {
+    "address": "0x3e9d50",
+    "flags": "0x7c8",
+    "data": "0x3cb381",
+    "length": 14,
+    "value": "world_box_line"
+  },
+  {
+    "address": "0x3e9d70",
+    "flags": "0x7c8",
+    "data": "0x3cb390",
+    "length": 19,
+    "value": "world_cupboard_line"
+  },
+  {
+    "address": "0x3e9d90",
+    "flags": "0x7c8",
+    "data": "0x3cb3a4",
+    "length": 17,
+    "value": "world_barrel_line"
+  },
+  {
+    "address": "0x3e9db0",
+    "flags": "0x7c8",
+    "data": "0x3cb3b6",
+    "length": 14,
+    "value": "world_ore_line"
+  },
+  {
+    "address": "0x3e9dd0",
+    "flags": "0x7c8",
+    "data": "0x3cb3c5",
+    "length": 15,
+    "value": "world_tree_line"
+  },
+  {
+    "address": "0x3e9df0",
+    "flags": "0x7c8",
+    "data": "0x3cb3d5",
+    "length": 17,
+    "value": "world_animal_line"
+  },
+  {
+    "address": "0x3e9e10",
+    "flags": "0x7c8",
+    "data": "0x3cb3e7",
+    "length": 14,
+    "value": "world_bot_line"
+  },
+  {
+    "address": "0x3e9e30",
+    "flags": "0x7c8",
+    "data": "0x3cb3f6",
+    "length": 17,
+    "value": "world_turret_line"
+  },
+  {
+    "address": "0x3e9e50",
+    "flags": "0x7c8",
+    "data": "0x3cb408",
+    "length": 18,
+    "value": "world_airdrop_line"
+  },
+  {
+    "address": "0x3e9e70",
+    "flags": "0x7c8",
+    "data": "0x3cb41b",
+    "length": 11,
+    "value": "ui_accent_r"
+  },
+  {
+    "address": "0x3e9e90",
+    "flags": "0x7c8",
+    "data": "0x3cb427",
+    "length": 11,
+    "value": "ui_accent_g"
+  },
+  {
+    "address": "0x3e9eb0",
+    "flags": "0x7c8",
+    "data": "0x3cb433",
+    "length": 11,
+    "value": "ui_accent_b"
+  },
+  {
+    "address": "0x3e9ed0",
+    "flags": "0x7c8",
+    "data": "0x3cb43f",
+    "length": 11,
+    "value": "ui_language"
+  },
+  {
+    "address": "0x3e9ef0",
+    "flags": "0x7c8",
+    "data": "0x3cb44b",
+    "length": 13,
+    "value": "aimbot_enable"
+  },
+  {
+    "address": "0x3e9f10",
+    "flags": "0x7c8",
+    "data": "0x3cb459",
+    "length": 14,
+    "value": "aimbot_players"
+  },
+  {
+    "address": "0x3e9f30",
+    "flags": "0x7c8",
+    "data": "0x3cb468",
+    "length": 14,
+    "value": "aimbot_animals"
+  },
+  {
+    "address": "0x3e9f50",
+    "flags": "0x7c8",
+    "data": "0x3cb477",
+    "length": 16,
+    "value": "aim_visible_only"
+  },
+  {
+    "address": "0x3e9f70",
+    "flags": "0x7c8",
+    "data": "0x3cb488",
+    "length": 12,
+    "value": "aim_draw_fov"
+  },
+  {
+    "address": "0x3e9f90",
+    "flags": "0x7c8",
+    "data": "0x3cb495",
+    "length": 7,
+    "value": "aim_fov"
+  },
+  {
+    "address": "0x3e9fb0",
+    "flags": "0x7c8",
+    "data": "0x3cb49d",
+    "length": 12,
+    "value": "aim_distance"
+  },
+  {
+    "address": "0x3e9fd0",
+    "flags": "0x7c8",
+    "data": "0x3cb4aa",
+    "length": 10,
+    "value": "aim_smooth"
+  },
+  {
+    "address": "0x3e9ff0",
+    "flags": "0x7c8",
+    "data": "0x3cb4b5",
+    "length": 15,
+    "value": "aim_target_mode"
+  },
+  {
+    "address": "0x3ea010",
+    "flags": "0x7c8",
+    "data": "0x3cb4c5",
+    "length": 8,
+    "value": "aim_bone"
+  },
+  {
+    "address": "0x3ea030",
+    "flags": "0x7c8",
+    "data": "0x3cb4ce",
+    "length": 11,
+    "value": "aim_trigger"
+  },
+  {
+    "address": "0x3ea050",
+    "flags": "0x7c8",
+    "data": "0x3cb4da",
+    "length": 10,
+    "value": "aim_jitter"
+  },
+  {
+    "address": "0x3ea070",
+    "flags": "0x7c8",
+    "data": "0x3cb4e5",
+    "length": 15,
+    "value": "aim_ignore_team"
+  },
+  {
+    "address": "0x3ea090",
+    "flags": "0x7c8",
+    "data": "0x3cb4f5",
+    "length": 10,
+    "value": "aim_sticky"
+  },
+  {
+    "address": "0x3ea0b0",
+    "flags": "0x7c8",
+    "data": "0x3cb500",
+    "length": 12,
+    "value": "aim_max_turn"
+  },
+  {
+    "address": "0x3ea0d0",
+    "flags": "0x7c8",
+    "data": "0x3cb50d",
+    "length": 15,
+    "value": "aim_reaction_ms"
+  },
+  {
+    "address": "0x3ea0f0",
+    "flags": "0x7c8",
+    "data": "0x3cb51d",
+    "length": 15,
+    "value": "aim_draw_target"
+  },
+  {
+    "address": "0x3ea110",
+    "flags": "0x7c8",
+    "data": "0x3cb52d",
+    "length": 15,
+    "value": "autofire_enable"
+  },
+  {
+    "address": "0x3ea130",
+    "flags": "0x7c8",
+    "data": "0x3cb53d",
+    "length": 14,
+    "value": "autofire_armed"
+  },
+  {
+    "address": "0x3ea150",
+    "flags": "0x7c8",
+    "data": "0x3cb54c",
+    "length": 19,
+    "value": "autofire_fov_source"
+  },
+  {
+    "address": "0x3ea170",
+    "flags": "0x7c8",
+    "data": "0x3cb560",
+    "length": 12,
+    "value": "autofire_fov"
+  },
+  {
+    "address": "0x3ea190",
+    "flags": "0x7c8",
+    "data": "0x3cb56d",
+    "length": 17,
+    "value": "autofire_distance"
+  },
+  {
+    "address": "0x3ea1b0",
+    "flags": "0x7c8",
+    "data": "0x3cb57f",
+    "length": 21,
+    "value": "autofire_visible_only"
+  },
+  {
+    "address": "0x3ea1d0",
+    "flags": "0x7c8",
+    "data": "0x3cb595",
+    "length": 20,
+    "value": "autofire_ignore_team"
+  },
+  {
+    "address": "0x3ea1f0",
+    "flags": "0x7c8",
+    "data": "0x3cb5aa",
+    "length": 16,
+    "value": "autofire_players"
+  },
+  {
+    "address": "0x3ea210",
+    "flags": "0x7c8",
+    "data": "0x3cb5bb",
+    "length": 16,
+    "value": "autofire_animals"
+  },
+  {
+    "address": "0x3ea230",
+    "flags": "0x7c8",
+    "data": "0x3cb5cc",
+    "length": 17,
+    "value": "autofire_delay_ms"
+  },
+  {
+    "address": "0x3ea250",
+    "flags": "0x7c8",
+    "data": "0x3cb5de",
+    "length": 20,
+    "value": "autofire_show_button"
+  },
+  {
+    "address": "0x3ea270",
+    "flags": "0x7c8",
+    "data": "0x3cb5f3",
+    "length": 17,
+    "value": "autofire_draw_fov"
+  },
+  {
+    "address": "0x3ea290",
+    "flags": "0x7c8",
+    "data": "0x3cb605",
+    "length": 17,
+    "value": "fps_unlock_enable"
+  },
+  {
+    "address": "0x3ea2b0",
+    "flags": "0x7c8",
+    "data": "0x3cb617",
+    "length": 10,
+    "value": "fps_target"
+  },
+  {
+    "address": "0x3ea2d0",
+    "flags": "0x7c8",
+    "data": "0x3cb622",
+    "length": 19,
+    "value": "time_control_enable"
+  },
+  {
+    "address": "0x3ea2f0",
+    "flags": "0x7c8",
+    "data": "0x3cb636",
+    "length": 11,
+    "value": "time_preset"
+  },
+  {
+    "address": "0x3ea310",
+    "flags": "0x7c8",
+    "data": "0x3cb642",
+    "length": 16,
+    "value": "time_custom_hour"
+  },
+  {
+    "address": "0x3ea330",
+    "flags": "0x7c8",
+    "data": "0x3cb653",
+    "length": 14,
+    "value": "freecam_enable"
+  },
+  {
+    "address": "0x3ea350",
+    "flags": "0x7c8",
+    "data": "0x3cb662",
+    "length": 19,
+    "value": "skin_changer_enable"
+  },
+  {
+    "address": "0x3ea370",
+    "flags": "0x7c8",
+    "data": "0x3cb676",
+    "length": 10,
+    "value": "skin_index"
+  },
+  {
+    "address": "0x3ea390",
+    "flags": "0x7c8",
+    "data": "0x3cb681",
+    "length": 19,
+    "value": "freecam_show_button"
+  },
+  {
+    "address": "0x3ea3b0",
+    "flags": "0x7c8",
+    "data": "0x3cb695",
+    "length": 13,
+    "value": "freecam_speed"
+  },
+  {
+    "address": "0x3ea3d0",
+    "flags": "0x7c8",
+    "data": "0x3cb6a3",
+    "length": 10,
+    "value": "fly_enable"
+  },
+  {
+    "address": "0x3ea3f0",
+    "flags": "0x7c8",
+    "data": "0x3cb6ae",
+    "length": 16,
+    "value": "fly_show_buttons"
+  },
+  {
+    "address": "0x3ea410",
+    "flags": "0x7c8",
+    "data": "0x3cb6bf",
+    "length": 9,
+    "value": "fly_speed"
+  },
+  {
+    "address": "0x3ea430",
+    "flags": "0x7c8",
+    "data": "0x3cb6c9",
+    "length": 12,
+    "value": "chams_enable"
+  },
+  {
+    "address": "0x3ea450",
+    "flags": "0x7c8",
+    "data": "0x3cb6d6",
+    "length": 10,
+    "value": "chams_mode"
+  },
+  {
+    "address": "0x3ea470",
+    "flags": "0x7c8",
+    "data": "0x3cb6e1",
+    "length": 19,
+    "value": "chams_through_walls"
+  },
+  {
+    "address": "0x3ea490",
+    "flags": "0x7c8",
+    "data": "0x3cb6f5",
+    "length": 10,
+    "value": "chams_glow"
+  },
+  {
+    "address": "0x3ea4b0",
+    "flags": "0x7c8",
+    "data": "0x3cb700",
+    "length": 11,
+    "value": "chams_vis_r"
+  },
+  {
+    "address": "0x3ea4d0",
+    "flags": "0x7c8",
+    "data": "0x3cb70c",
+    "length": 11,
+    "value": "chams_vis_g"
+  },
+  {
+    "address": "0x3ea4f0",
+    "flags": "0x7c8",
+    "data": "0x3cb718",
+    "length": 11,
+    "value": "chams_vis_b"
+  },
+  {
+    "address": "0x3ea510",
+    "flags": "0x7c8",
+    "data": "0x3cb724",
+    "length": 11,
+    "value": "chams_vis_a"
+  },
+  {
+    "address": "0x3ea530",
+    "flags": "0x7c8",
+    "data": "0x3cb730",
+    "length": 11,
+    "value": "chams_hid_r"
+  },
+  {
+    "address": "0x3ea550",
+    "flags": "0x7c8",
+    "data": "0x3cb73c",
+    "length": 11,
+    "value": "chams_hid_g"
+  },
+  {
+    "address": "0x3ea570",
+    "flags": "0x7c8",
+    "data": "0x3cb748",
+    "length": 11,
+    "value": "chams_hid_b"
+  },
+  {
+    "address": "0x3ea590",
+    "flags": "0x7c8",
+    "data": "0x3cb754",
+    "length": 11,
+    "value": "chams_hid_a"
+  },
+  {
+    "address": "0x3ea5b0",
+    "flags": "0x7c8",
+    "data": "0x3cb760",
+    "length": 18,
+    "value": "stream_mode_enable"
+  },
+  {
+    "address": "0x3ea5d0",
+    "flags": "0x7c8",
+    "data": "0x3cb773",
+    "length": 15,
+    "value": "autofarm_enable"
+  },
+  {
+    "address": "0x3ea5f0",
+    "flags": "0x7c8",
+    "data": "0x3cb783",
+    "length": 20,
+    "value": "autofarm_show_button"
+  },
+  {
+    "address": "0x3ea610",
+    "flags": "0x7c8",
+    "data": "0x3cb798",
+    "length": 14,
+    "value": "autofarm_trees"
+  },
+  {
+    "address": "0x3ea630",
+    "flags": "0x7c8",
+    "data": "0x3cb7a7",
+    "length": 12,
+    "value": "autofarm_ore"
+  },
+  {
+    "address": "0x3ea650",
+    "flags": "0x7c8",
+    "data": "0x3cb7b4",
+    "length": 17,
+    "value": "autofarm_max_dist"
+  },
+  {
+    "address": "0x3ea670",
+    "flags": "0x7c8",
+    "data": "0x3cb7c6",
+    "length": 20,
+    "value": "autofarm_attack_dist"
+  },
+  {
+    "address": "0x3ea690",
+    "flags": "0x7c8",
+    "data": "0x3cb7db",
+    "length": 42,
+    "value": "[ConfigManager] Config loaded successfully"
+  },
+  {
+    "address": "0x3ea6b0",
+    "flags": "0x7c8",
+    "data": "0x3cb806",
+    "length": 8,
+    "value": "auth_key"
+  },
+  {
+    "address": "0x3ea6d0",
+    "flags": "0x7c8",
+    "data": "0x3cb80f",
+    "length": 4,
+    "value": "v1.0"
+  },
+  {
+    "address": "0x3ea6f0",
+    "flags": "0x7c8",
+    "data": "0x3cb814",
+    "length": 41,
+    "value": "[ConfigManager] Config saved successfully"
+  },
+  {
+    "address": "0x3ea710",
+    "flags": "0x7c8",
+    "data": "0x3cb83e",
+    "length": 13,
+    "value": "silent_enable"
+  },
+  {
+    "address": "0x3ea730",
+    "flags": "0x7c8",
+    "data": "0x3cb84c",
+    "length": 19,
+    "value": "silent_visible_only"
+  },
+  {
+    "address": "0x3ea750",
+    "flags": "0x7c8",
+    "data": "0x3cb860",
+    "length": 18,
+    "value": "silent_ignore_team"
+  },
+  {
+    "address": "0x3ea770",
+    "flags": "0x7c8",
+    "data": "0x3cb873",
+    "length": 10,
+    "value": "silent_fov"
+  },
+  {
+    "address": "0x3ea790",
+    "flags": "0x7c8",
+    "data": "0x3cb87e",
+    "length": 15,
+    "value": "silent_distance"
+  },
+  {
+    "address": "0x3ea7b0",
+    "flags": "0x7c8",
+    "data": "0x3cb88e",
+    "length": 11,
+    "value": "silent_bone"
+  },
+  {
+    "address": "0x3ea7d0",
+    "flags": "0x7c8",
+    "data": "0x3cb89a",
+    "length": 18,
+    "value": "silent_target_mode"
+  },
+  {
+    "address": "0x3ea7f0",
+    "flags": "0x7c8",
+    "data": "0x3cb8ad",
+    "length": 15,
+    "value": "silent_draw_fov"
+  },
+  {
+    "address": "0x3ea810",
+    "flags": "0x7c8",
+    "data": "0x3cb8bd",
+    "length": 17,
+    "value": "silent_hit_chance"
+  },
+  {
+    "address": "0x3ea830",
+    "flags": "0x7c8",
+    "data": "0x3cb8cf",
+    "length": 40,
+    "value": "[ConfigManager] Config reset to defaults"
+  },
+  {
+    "address": "0x3ea850",
+    "flags": "0x7c8",
+    "data": "0x3cb8f8",
+    "length": 11,
+    "value": "SpoofedIDFV"
+  },
+  {
+    "address": "0x3ea870",
+    "flags": "0x7c8",
+    "data": "0x3cb904",
+    "length": 5,
+    "value": "nonce"
+  },
+  {
+    "address": "0x3ea890",
+    "flags": "0x7c8",
+    "data": "0x3cb90a",
+    "length": 5,
+    "value": "aqreh"
+  },
+  {
+    "address": "0x3ea8b0",
+    "flags": "0x7c8",
+    "data": "0x3cb910",
+    "length": 4,
+    "value": "kuid"
+  },
+  {
+    "address": "0x3ea8d0",
+    "flags": "0x7c8",
+    "data": "0x3cb915",
+    "length": 3,
+    "value": "key"
+  },
+  {
+    "address": "0x3ea8f0",
+    "flags": "0x7c8",
+    "data": "0x3cb919",
+    "length": 8,
+    "value": "tutorial"
+  },
+  {
+    "address": "0x3ea910",
+    "flags": "0x7c8",
+    "data": "0x3cbc64",
+    "length": 12,
+    "value": "SCLAlertView"
+  },
+  {
+    "address": "0x3ea930",
+    "flags": "0x7c8",
+    "data": "0x3cbc71",
+    "length": 3,
+    "value": "SCL"
+  },
+  {
+    "address": "0x3ea950",
+    "flags": "0x7c8",
+    "data": "0x3cbc75",
+    "length": 5,
+    "value": "Alert"
+  },
+  {
+    "address": "0x3ea970",
+    "flags": "0x7c8",
+    "data": "0x3cbc7b",
+    "length": 16,
+    "value": "UITransitionView"
+  },
+  {
+    "address": "0x3ea990",
+    "flags": "0x7c8",
+    "data": "0x3cbc8c",
+    "length": 2,
+    "value": "UI"
+  },
+  {
+    "address": "0x3ea9b0",
+    "flags": "0x7c8",
+    "data": "0x3cbc8f",
+    "length": 5,
+    "value": "%@ %@"
+  },
+  {
+    "address": "0x3ea9d0",
+    "flags": "0x7c8",
+    "data": "0x3cbc95",
+    "length": 5,
+    "value": "OXIDE"
+  },
+  {
+    "address": "0x3ea9f0",
+    "flags": "0x7c8",
+    "data": "0x3cbc9b",
+    "length": 10,
+    "value": "CONNECTION"
+  },
+  {
+    "address": "0x3eaa10",
+    "flags": "0x7c8",
+    "data": "0x3cbca6",
+    "length": 15,
+    "value": "CONNECTION LOST"
+  },
+  {
+    "address": "0x3eaa30",
+    "flags": "0x7c8",
+    "data": "0x3cbcb6",
+    "length": 10,
+    "value": "DATA ERROR"
+  },
+  {
+    "address": "0x3eaa50",
+    "flags": "0x7c8",
+    "data": "0x3cbcf0",
+    "length": 2,
+    "value": "AQ"
+  },
+  {
+    "address": "0x3eaa70",
+    "flags": "0x7c8",
+    "data": "0x3cbdb9",
+    "length": 74,
+    "value": "[<%@ %p> %s]: this class is not key value coding-compliant for the key: %@"
+  },
+  {
+    "address": "0x3eaa90",
+    "flags": "0x7c8",
+    "data": "0x3ccfa8",
+    "length": 1044,
+    "value": "#include <metal_stdlib>\nusing namespace metal;\n\nstruct Uniforms {\n    float4x4 projectionMatrix;\n};\n\nstruct VertexIn {\n    float2 position  [[attribute(0)]];\n    float2 texCoords [[attribute(1)]];\n    uchar4 color     [[attribute(2)]];\n};\n\nstruct VertexOut {\n    float4 position [[position]];\n    float2 texCoords;\n    float4 color;\n};\n\nvertex VertexOut vertex_main(VertexIn in                 [[stage_in]],\n                             constant Uniforms &uniforms [[buffer(1)]]) {\n    VertexOut out;\n    out.position = uniforms.projectionMatrix * float4(in.position, 0, 1);\n    out.texCoords = in.texCoords;\n    out.color = float4(in.color) / float4(255.0);\n    return out;\n}\n\nfragment half4 fragment_main(VertexOut in [[stage_in]],\n                             texture2d<half, access::sample> texture [[texture(0)]]) {\n    constexpr sampler linearSampler(coord::normalized, min_filter::linear, mag_filter::linear, mip_filter::linear);\n    half4 texColor = texture.sample(linearSampler, in.texCoords);\n    return half4(in.color) * texColor;\n}\n"
+  },
+  {
+    "address": "0x3eaab0",
+    "flags": "0x7c8",
+    "data": "0x3cd3bd",
+    "length": 41,
+    "value": "Error: failed to create Metal library: %@"
+  },
+  {
+    "address": "0x3eaad0",
+    "flags": "0x7c8",
+    "data": "0x3cd3e7",
+    "length": 11,
+    "value": "vertex_main"
+  },
+  {
+    "address": "0x3eaaf0",
+    "flags": "0x7c8",
+    "data": "0x3cd3f3",
+    "length": 13,
+    "value": "fragment_main"
+  },
+  {
+    "address": "0x3eab10",
+    "flags": "0x7c8",
+    "data": "0x3cd401",
+    "length": 59,
+    "value": "Error: failed to find Metal shader functions in library: %@"
+  },
+  {
+    "address": "0x3eab30",
+    "flags": "0x7c8",
+    "data": "0x3cd43d",
+    "length": 48,
+    "value": "Error: failed to create Metal pipeline state: %@"
+  }
+]

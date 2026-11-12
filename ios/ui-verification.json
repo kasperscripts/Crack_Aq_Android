@@ -1,0 +1,7 @@
+{
+  "telegram_button_target": "https://t.me/Icon_Crack",
+  "opens_only_when_pressed": true,
+  "opening_dispatched_to_main_queue": true,
+  "original_section_drawing_preserved": true,
+  "device_ui_rendering_tested": false
+}

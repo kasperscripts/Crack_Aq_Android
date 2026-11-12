@@ -1,0 +1,31 @@
+{
+  "source_sha256": "e278f20283985ee25f17989f6c883172aa0faeb3e90eb0bffc89595131260ffe",
+  "ipa_sha256": "a5d1691e1a64b4f5b78c9e518f18fa066e1f5cb8d960e3e1c2017aafd5daa54f",
+  "ipa_size": 879270305,
+  "entries": 631,
+  "unchanged_entries": 628,
+  "changed_entries": [
+    "Payload/OXIDE.app/YouAreRetardBro.dylib",
+    "Payload/OXIDE.app/_CodeSignature/CodeResources",
+    "Payload/OXIDE.app/OXIDE"
+  ],
+  "all_entry_offsets_and_compressed_sizes_preserved": true,
+  "full_zip_crc_verified": true,
+  "original_app_identity_and_info_preserved": true,
+  "game_executable_code_unchanged": true,
+  "signing": {
+    "module": {
+      "code_pages_verified": 1144,
+      "ad_hoc": true,
+      "requires_installer_resigning": true,
+      "cdhash_sha256": "06f78d00ba552341da8dbc5a4bba421ed9990341"
+    },
+    "executable": {
+      "code_pages_verified": 17,
+      "ad_hoc": true,
+      "requires_installer_resigning": true,
+      "cdhash_sha256": "6f619f8b60efcd35ad71b86f3c265b18ca9a27d5"
+    }
+  },
+  "physical_device_tested": false
+}

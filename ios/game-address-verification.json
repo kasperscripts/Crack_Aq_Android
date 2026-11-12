@@ -1,0 +1,31 @@
+{
+  "game_version": "1.18.1186",
+  "server_version": "69",
+  "addresses": [
+    {
+      "name": "HitBox_IsVisible",
+      "rva": "0x4F83520",
+      "executable_segment": "__TEXT",
+      "first_16_bytes": "ff8304d1ef3b096ded330a6deb2b0b6d"
+    },
+    {
+      "name": "PlayerManager_get_health",
+      "rva": "0x50B9CA4",
+      "executable_segment": "__TEXT",
+      "first_16_bytes": "f44fbea9fd7b01a9fd430091f30300aa"
+    },
+    {
+      "name": "NetworkBehaviour_get_isLocalPlayer",
+      "rva": "0xBB9B81C",
+      "executable_segment": "__TEXT",
+      "first_16_bytes": "082040f9680000b400294139c0035fd6"
+    },
+    {
+      "name": "Camera_get_main",
+      "rva": "0xCBC0DC4",
+      "executable_segment": "__TEXT",
+      "first_16_bytes": "f44fbea9fd7b01a9fd43009133e101b0"
+    }
+  ],
+  "game_functions_executed": false
+}
