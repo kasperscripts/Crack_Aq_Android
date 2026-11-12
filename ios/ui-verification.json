@@ -1,7 +1,9 @@
 {
   "telegram_button_target": "https://t.me/Icon_Crack",
+  "display_attribution": "@Icon_Crack \u0431\u0430\u0439 \u0431\u0430\u0439 \u0436\u0438\u0440\u043d\u044b\u0439",
   "opens_only_when_pressed": true,
   "opening_dispatched_to_main_queue": true,
   "original_section_drawing_preserved": true,
+  "data_const_read_only_enforced": true,
   "device_ui_rendering_tested": false
 }

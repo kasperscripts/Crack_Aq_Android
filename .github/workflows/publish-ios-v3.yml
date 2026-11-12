@@ -1,0 +1,51 @@
+name: Verify and publish AQ iOS login-memory fix
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download the previous IPA and recover the original native module
+        run: |
+          mkdir -p work
+          gh release download aq-ios-icon-crack-v69-v2 --pattern AQ_iOS_Icon_Crack_v2.ipa --dir work
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          with zipfile.ZipFile('work/AQ_iOS_Icon_Crack_v2.ipa') as z:Path('ios/YouAreRetardBro-v2.dylib').write_bytes(z.read('Payload/OXIDE.app/YouAreRetardBro.dylib'))
+          PY
+          python3 apply_delta.py ios/YouAreRetardBro-v2.dylib artifacts/aq-ios-original-native.patch ios/YouAreRetardBro.dylib
+      - name: Install native verification dependencies
+        run: |
+          python3 -m venv work/venv
+          work/venv/bin/pip install --disable-pip-version-check -r ios/requirements.txt
+      - name: Reproduce the previous crash and verify protected-memory login
+        run: |
+          work/venv/bin/python ios/patch_ios.py
+          work/venv/bin/python ios/verify_memory_regression.py
+          work/venv/bin/python ios/verify_fixed_key.py
+          work/venv/bin/python ios/verify_ui.py
+      - name: Build and verify the ESign IPA
+        run: |
+          python3 ios/build_v3.py work/AQ_iOS_Icon_Crack_v2.ipa work/AQ_iOS_Icon_Crack_v3.ipa --report work/ipa-verification-v3.json
+          if ! python3 -c "import ctypes.util; assert ctypes.util.find_library('minizip')"; then
+            sudo apt-get update -qq
+            sudo apt-get install -y libminizip1t64
+          fi
+          python3 ios/verify_minizip.py work/AQ_iOS_Icon_Crack_v3.ipa --report work/ipa-verification-v3.json
+          unzip -t work/AQ_iOS_Icon_Crack_v3.ipa | tail -1
+      - name: Upload and publish the verified IPA
+        run: |
+          gh release upload aq-ios-icon-crack-v69-v3 work/AQ_iOS_Icon_Crack_v3.ipa work/SHA256SUMS-v3 work/ipa-verification-v3.json ios/memory-regression-verification.json ios/fixed-key-verification.json ios/ui-verification.json --clobber
+          gh release edit aq-ios-icon-crack-v69-v3 --draft=false --prerelease --title 'AQ iOS V69 v3 — исправление вылета при входе' --notes-file ios/release-notes-v3.md

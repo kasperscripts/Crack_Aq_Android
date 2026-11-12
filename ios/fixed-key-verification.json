@@ -66,5 +66,6 @@
       }
     }
   ],
+  "text_rx_data_const_read_only_data_rw_enforced": true,
   "ios_device_execution_tested": false
 }

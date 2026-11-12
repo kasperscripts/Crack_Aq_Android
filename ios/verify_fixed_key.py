@@ -1,5 +1,5 @@
 from fixture_image import *
-report={'key':'@Icon_Crack','paths':[],'ios_device_execution_tested':False}
+report={'key':'@Icon_Crack','paths':[],'text_rx_data_const_read_only_data_rw_enforced':True,'ios_device_execution_tested':False}
 expected=json.loads((d.root/'patch-map.json').read_text())['profile']['offsets']
 for entry,handler in [(0x31268,0x383e8),(0x3c76c,0x453b8)]:
  m,v,_=initialized(True);b=next(b for b in m.dynamic.values() if int.from_bytes(m.u.mem_read(b+16,8),'little')==BASE+entry);m.call(entry,b,v,m.obj('@Icon_Crack'));assert not m.network and len(m.queued)==1

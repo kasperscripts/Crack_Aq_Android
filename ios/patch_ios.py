@@ -8,7 +8,9 @@ GATE=0x3e6e70
 LOCAL=0x3e6f40
 FIELD=0x3e7240
 DATA=0x3e7300
-DESCRIPTOR=0x3eac20
+# dyld makes __DATA_CONST read-only after fixups. Keep runtime descriptors in
+# unused, writable __DATA VM padding after the last section (end 0x491aa1).
+DESCRIPTOR=0x491b00
 ks=Ks(KS_ARCH_ARM64,KS_MODE_LITTLE_ENDIAN)
 raw=bytearray(ORIGINAL.read_bytes())
 assert hashlib.sha256(raw).hexdigest()=='d0999187325b5a027997dfe01e9b3ed57e6f4778ce0af5ea1c7937e68a4971bf'
@@ -30,8 +32,9 @@ profile={'nonce':'Icon_Crack_local','error':'Try again!','draw':'sX9AQR3','messa
 profile_address=string(json.dumps(profile,separators=(',',':')))
 fields={k:string(k) for k in ['nonce','error','draw','message','offsets','expires_at']}
 cursor=0x3e7900
-auth_title=string('AUTH: @Icon_Crack')
-telegram_title=string('Telegram: @Icon_Crack')
+display_name=string('@Icon_Crack бай бай жирный')
+auth_title=string('AUTH: @Icon_Crack бай бай жирный')
+telegram_title=string('Telegram: @Icon_Crack бай бай жирный')
 telegram_url=string('https://t.me/Icon_Crack')
 ui_class=string('UIApplication');url_class=string('NSURL');dictionary_class=string('NSDictionary')
 sel_shared=string('sharedApplication');sel_open=string('openURL:options:completionHandler:');sel_dictionary=string('dictionary')
@@ -160,7 +163,7 @@ asm(FIELD,f'''
 ''','dictionary field',DATA)
 asm(0x31268,f'b #{GATE}','auth trampoline')
 asm(0x3c76c,'b #0x3e7a00','repeat auth trampoline')
-for a in [0x4f7f4,0x4f920]:asm(a,ptr('x0',key),'menu attribution')
+for a in [0x4f7f4,0x4f920]:asm(a,ptr('x0',display_name),'menu attribution')
 asm(0x538bc,ptr('x0',telegram_title),'Telegram section label')
 asm(0x56690,ptr('x0',auth_title),'authentication attribution')
 asm(0x538dc,'bl #0x3e7500','Telegram button wrapper')
@@ -253,7 +256,7 @@ asm(0x3e77c0,f'''
  ldp x29,x30,[sp],#16
  ret
 ''','selector helper',0x3e7900)
-assert cursor<0x3e8000
+assert cursor<=0x3e7a00, 'UI literals must not overlap the repeat-login gate'
 (ROOT/'YouAreRetardBro-icon.dylib').write_bytes(raw)
 (ROOT/'patch-map.json').write_text(json.dumps({'patches':patches,'profile':profile,'input_sha256':hashlib.sha256(ORIGINAL.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(raw).hexdigest()},indent=2)+'\n')
 print('Patched',len(patches),'regions; code/data cave ends',hex(cursor))

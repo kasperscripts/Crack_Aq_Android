@@ -1,0 +1,26 @@
+{
+  "previous_build_regression_cases": [
+    {
+      "entry": "0x31268",
+      "previous_protected_write_reproduced": true,
+      "fault_addresses": [
+        "0x3eac20"
+      ]
+    },
+    {
+      "entry": "0x3c76c",
+      "previous_protected_write_reproduced": true,
+      "fault_addresses": [
+        "0x3eaca0"
+      ]
+    }
+  ],
+  "fixed_runtime_descriptors_in_writable_data_padding": true,
+  "writable_data_sections_end": "0x491aa1",
+  "new_descriptor_addresses": [
+    "0x491b00",
+    "0x491b30",
+    "0x491b80"
+  ],
+  "physical_ios_crash_log_available": false
+}
