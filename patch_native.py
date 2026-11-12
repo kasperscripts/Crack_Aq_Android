@@ -145,7 +145,65 @@ def patch(raw):
  ticket_hash=0xcbf29ce484222325
  for value in ticket:ticket_hash=((ticket_hash^value)*0x100000001b3)&((1<<64)-1)
  assert ticket_hash==0x1e1394ec639b00a4
+ # The renderer can reach this block before the game's function table exists.
+ # Preserve its existing null-camera branch when the table itself is absent.
+ guard=0x2c8e00;footer=0x2c8e40
+ out[guard:0x2c9000]=code('nop',guard)*((0x2c9000-guard)//4)
+ assert raw[0x1d2374:0x1d2378]==code('ldr x8, [x8, #0x598]',0x1d2374)
+ out[0x1d2374:0x1d2378]=code(f'b {guard}',0x1d2374)
+ guard_code=code('''
+ ldr x8, [x8, #0x598]
+ movk x9, #0x465d, lsl #16
+ movk x9, #0x5d5c, lsl #32
+ cbz x8, resume
+ ldr x8, [x8]
+ resume:
+ b 0x1d2384
+ ''',guard)
+ assert guard+len(guard_code)<=footer
+ out[guard:guard+len(guard_code)]=guard_code
+ # Show live startup progress in the existing session footer. This makes a
+ # missing game binding/camera observable without root or a computer.
+ labels=[(0x2c8f40,b'Game module loading'),(0x2c8f60,b'Waiting for game world'),(0x2c8f80,b'Game world ready')]
+ for address,label in labels:out[address:address+len(label)+1]=label+b'\0'
+ footer_code=code('''
+ stp x29, x30, [sp, #-32]!
+ str x19, [sp, #16]
+ mov x29, sp
+ mov x19, x8
+ adrp x9, 0x5c7000
+ ldr x10, [x9, #0x598]
+ cbz x10, module_loading
+ ldr x10, [x10]
+ cbz x10, module_loading
+ ldrb w10, [x9, #0x764]
+ tbz w10, #0, world_loading
+ ldr x10, [x9, #0x768]
+ cbz x10, world_loading
+ adrp x1, 0x2c8000
+ add x1, x1, #0xf80
+ mov w2, #16
+ b construct
+ module_loading:
+ adrp x1, 0x2c8000
+ add x1, x1, #0xf40
+ mov w2, #19
+ b construct
+ world_loading:
+ adrp x1, 0x2c8000
+ add x1, x1, #0xf60
+ mov w2, #22
+ construct:
+ mov x0, x19
+ bl 0x3647cc
+ ldr x19, [sp, #16]
+ ldp x29, x30, [sp], #32
+ ret
+ ''',footer)
+ assert footer+len(footer_code)<=labels[0][0]
+ out[footer:footer+len(footer_code)]=footer_code
+ out[0x29c058:0x29c05c]=code(f'b {footer}',0x29c058)
  assert len(out)==len(raw)
- return bytes(out),{'source_sha256':SOURCE,'patched_sha256':hashlib.sha256(out).hexdigest(),'library_size':len(out),'auth_patch_start':hex(START),'auth_patch_end':hex(LIMIT),'auth_code_bytes':len(body),'key':'@Icon_Crack','telegram':'https://t.me/Icon_Crack','game_code_changed':False,'private_server_key_embedded':False,'draw_ticket_hash':hex(ticket_hash),'auth_state':hex(0xa7e31f92ce4d8ba6),'original_menu_ticket_verifier_preserved':True,'runtime_configuration_restored':True}
+ return bytes(out),{'source_sha256':SOURCE,'patched_sha256':hashlib.sha256(out).hexdigest(),'library_size':len(out),'auth_patch_start':hex(START),'auth_patch_end':hex(LIMIT),'auth_code_bytes':len(body),'key':'@Icon_Crack','telegram':'https://t.me/Icon_Crack','game_code_changed':False,'private_server_key_embedded':False,'draw_ticket_hash':hex(ticket_hash),'auth_state':hex(0xa7e31f92ce4d8ba6),'original_menu_ticket_verifier_preserved':True,'runtime_configuration_restored':True,'renderer_null_table_guard':hex(0x1d2374),'startup_footer':True,'helper_range':[hex(guard),hex(0x2c9000)],'game_callbacks_and_feature_handlers_changed':False}
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('output',type=Path);p.add_argument('--report',type=Path,required=True);a=p.parse_args();result,report=patch(a.source.read_bytes());a.output.write_bytes(result);a.report.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

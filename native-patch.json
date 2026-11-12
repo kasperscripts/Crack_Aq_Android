@@ -1,6 +1,6 @@
 {
   "source_sha256": "3968c47fb3897d4cc676693e16f5e2c69631006c03c011497a1faf372b8b66d7",
-  "patched_sha256": "09bee27f0663f6526accddbab7dc61560c08528dfc3662cbfb1d4057ad8e3501",
+  "patched_sha256": "7de3feb8845e0ed13baa1842e65b2dc1cc7792b317789eeabe0729f2baf3fb92",
   "library_size": 6053008,
   "auth_patch_start": "0x2c8b3c",
   "auth_patch_end": "0x2c8e00",
@@ -12,5 +12,12 @@
   "draw_ticket_hash": "0x1e1394ec639b00a4",
   "auth_state": "0xa7e31f92ce4d8ba6",
   "original_menu_ticket_verifier_preserved": true,
-  "runtime_configuration_restored": true
+  "runtime_configuration_restored": true,
+  "renderer_null_table_guard": "0x1d2374",
+  "startup_footer": true,
+  "helper_range": [
+    "0x2c8e00",
+    "0x2c9000"
+  ],
+  "game_callbacks_and_feature_handlers_changed": false
 }

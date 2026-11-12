@@ -1,0 +1,49 @@
+{
+  "cases_passed": 9,
+  "cases": [
+    {
+      "case": "previous-null-game-table",
+      "invalid_read_reproduced": true
+    },
+    {
+      "case": "renderer-missing-table",
+      "passed": true
+    },
+    {
+      "case": "renderer-empty-camera",
+      "passed": true
+    },
+    {
+      "case": "renderer-initialized-table",
+      "passed": true
+    },
+    {
+      "case": "startup-footer",
+      "value": "Game module loading",
+      "passed": true
+    },
+    {
+      "case": "startup-footer",
+      "value": "Game module loading",
+      "passed": true
+    },
+    {
+      "case": "startup-footer",
+      "value": "Waiting for game world",
+      "passed": true
+    },
+    {
+      "case": "startup-footer",
+      "value": "Waiting for game world",
+      "passed": true
+    },
+    {
+      "case": "startup-footer",
+      "value": "Game world ready",
+      "passed": true
+    }
+  ],
+  "physical_phone_tested": false,
+  "actual_game_callbacks_tested": false,
+  "scope": "Native renderer null-table block and existing footer return ABI"
+}

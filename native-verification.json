@@ -1,5 +1,5 @@
 {
-  "library_sha256": "09bee27f0663f6526accddbab7dc61560c08528dfc3662cbfb1d4057ad8e3501",
+  "library_sha256": "7de3feb8845e0ed13baa1842e65b2dc1cc7792b317789eeabe0729f2baf3fb92",
   "cases_passed": 12,
   "cases": [
     {
@@ -235,16 +235,5 @@
   "phone_tested": false,
   "original_monitor_virtual_seconds": 30,
   "real_renderer_and_menu_body_auth_guards_verified": true,
-  "original_runtime_parser_executed_and_configuration_verified": true,
-  "previous_build_missing_runtime_reproduced": {
-    "message": "Key verified",
-    "main_menu_authorized": true,
-    "runtime_offsets": [
-      0,
-      0,
-      0,
-      0
-    ],
-    "runtime_ready": false
-  }
+  "original_runtime_parser_executed_and_configuration_verified": true
 }
