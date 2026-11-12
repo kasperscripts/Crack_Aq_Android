@@ -5,6 +5,9 @@ from pathlib import Path
 from unicorn import UC_HOOK_CODE
 from native_image import Image,BASE,HOST
 from unicorn.arm64_const import *
+RUNTIME=json.loads(Path(__file__).with_name('runtime-config.json').read_text())
+EXPECTED_TICKET=RUNTIME['draw_ticket']
+EXPECTED_OFFSETS=[int(RUNTIME['offsets'][n],16) for n in ['PlayerManager_get_health','HitBox_IsVisible','Camera_get_main','NetworkBehaviour_get_isLocalPlayer']]
 JNI=HOST+0x200000;JVT=JNI+0x1000;VM=JNI+0x2000;VMT=JNI+0x3000;ACT=JNI+0x4000;TUP=JNI+0x5000
 class Android(Image):
  def __init__(self,path,attached=True,context=True):
@@ -52,8 +55,16 @@ class Android(Image):
   self.putstr(TUP+0x28,b'fixture-device')
   self.u.mem_write(BASE+0x5c8b6c,b'\x01')
   self.call(0x2c86e8,TUP)
-  state={'required':self.u.mem_read(BASE+0x5c8b6c,1)[0],'busy':self.u.mem_read(BASE+0x5c8ae8,1)[0],'status':self.string(BASE+0x5c8aa0).decode(),'draw_ticket':self.string(BASE+0x5c8a88).decode(),'saved': [x.decode() for x in self.saved], 'detach':self.detach,'network_calls':len(self.network)}
+  state={'required':self.u.mem_read(BASE+0x5c8b6c,1)[0],'busy':self.u.mem_read(BASE+0x5c8ae8,1)[0],'status':self.string(BASE+0x5c8aa0).decode(),'draw_ticket':self.string(BASE+0x5c8a88).decode(),'saved': [x.decode() for x in self.saved], 'detach':self.detach,'network_calls':len(self.network),'runtime_offsets':list(struct.unpack('<QQQQ',self.u.mem_read(BASE+0x5c7688,32))),'runtime_ready':self.u.mem_read(BASE+0x5c76a8,1)[0]}
   return state
+
+class MonitorAndroid(Android):
+ def __init__(self,path):self.virtual_seconds=0;super().__init__(path)
+ def external(self,u,pc,size,data):
+  n=self.names[pc]
+  if n=='sleep':self.virtual_seconds+=self.reg(0);self.ret()
+  elif n=='_exit' or n=='syscall' and self.reg(0)!=178:raise AssertionError(('unexpected process termination',n,self.reg(0)))
+  else:super().external(u,pc,size,data)
 
 def menu_render_guard(m):
  # Execute the unchanged renderer's comparison against its own auth constant.
@@ -100,6 +111,7 @@ def main():
   if valid:
    assert set(m.methods.values())=={'getSharedPreferences','edit','putString','apply'}
    assert b'@Icon_Crack' in m.strings.values() and b'license_key' in m.strings.values()
+   assert s['draw_ticket']==EXPECTED_TICKET and s['runtime_offsets']==EXPECTED_OFFSETS and s['runtime_ready']==1
    assert m.call(0x29b324)==0xa7e31f92ce4d8ba6
    assert menu_render_guard(m) and menu_body_guard(m)
   else:
@@ -115,12 +127,18 @@ def main():
   assert s['detach']==(0 if attached else 1)
   s['case']='application-context-fallback';s['already_attached']=attached;results.append(s)
  # Failed entry followed by successful retry in the same native instance.
- m=Android(a.library);m.run(b'wrong');s=m.run(b'@Icon_Crack');assert s['required']==0 and s['draw_ticket']=='@Icon_Crack' and s['busy']==0;s['case']='invalid-then-valid';results.append(s)
- report={'library_sha256':hashlib.sha256(a.library.read_bytes()).hexdigest(),'cases_passed':len(results),'cases':results,'phone_tested':False,'real_renderer_and_menu_body_auth_guards_verified':True}
+ m=Android(a.library);m.run(b'wrong');s=m.run(b'@Icon_Crack');assert s['required']==0 and s['draw_ticket']==EXPECTED_TICKET and s['busy']==0;s['case']='invalid-then-valid';results.append(s)
+ monitor=MonitorAndroid(a.library);monitor.run(b'@Icon_Crack')
+ for _ in range(30):
+  monitor.call(0x1ca06c,count=200000)
+  assert monitor.call(0x29b324)==0xa7e31f92ce4d8ba6
+ assert monitor.virtual_seconds==30
+ report={'library_sha256':hashlib.sha256(a.library.read_bytes()).hexdigest(),'cases_passed':len(results),'cases':results,'phone_tested':False,'original_monitor_virtual_seconds':monitor.virtual_seconds,'real_renderer_and_menu_body_auth_guards_verified':True,'original_runtime_parser_executed_and_configuration_verified':True}
  if a.previous_library:
   old=Android(a.previous_library);state=old.run(b'@Icon_Crack')
-  assert state['required']==0 and not menu_render_guard(old) and not menu_body_guard(old)
-  report['previous_build_failure_reproduced']={'message':state['status'],'login_hidden':True,'main_menu_authorized':False}
+  assert state['required']==0
+  assert state['runtime_offsets']==[0,0,0,0] and state['runtime_ready']==0
+  report['previous_build_missing_runtime_reproduced']={'message':state['status'],'main_menu_authorized':menu_render_guard(old),'runtime_offsets':state['runtime_offsets'],'runtime_ready':False}
  if a.report:a.report.write_text(json.dumps(report,indent=2)+'\n')
  print(json.dumps({'cases_passed':len(results),'library_sha256':report['library_sha256']},indent=2))
 if __name__=='__main__':main()

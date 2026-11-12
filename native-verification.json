@@ -1,5 +1,5 @@
 {
-  "library_sha256": "0b07bb4073414387b5cb0fdb681f1923c9e495eefb8a538b48286daef72e623a",
+  "library_sha256": "09bee27f0663f6526accddbab7dc61560c08528dfc3662cbfb1d4057ad8e3501",
   "cases_passed": 12,
   "cases": [
     {
@@ -14,12 +14,19 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1
     },
     {
       "input": "@Icon_Crack",
@@ -29,12 +36,19 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1
     },
     {
       "input": "@Icon_Crack",
@@ -44,12 +58,19 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 1,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1
     },
     {
       "input": "@Icon_Crac",
@@ -62,7 +83,14 @@
       "draw_ticket": "",
       "saved": [],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_ready": 0
     },
     {
       "input": "@icon_crack",
@@ -75,7 +103,14 @@
       "draw_ticket": "",
       "saved": [],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_ready": 0
     },
     {
       "input": "@Icon_Crackx",
@@ -88,7 +123,14 @@
       "draw_ticket": "",
       "saved": [],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_ready": 0
     },
     {
       "input": "",
@@ -101,7 +143,14 @@
       "draw_ticket": "",
       "saved": [],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_ready": 0
     },
     {
       "input": "4096-byte invalid key",
@@ -114,18 +163,32 @@
       "draw_ticket": "",
       "saved": [],
       "detach": 0,
-      "network_calls": 0
+      "network_calls": 0,
+      "runtime_offsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "runtime_ready": 0
     },
     {
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 0,
       "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1,
       "case": "application-context-fallback",
       "already_attached": true
     },
@@ -133,12 +196,19 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 1,
       "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1,
       "case": "application-context-fallback",
       "already_attached": false
     },
@@ -146,20 +216,35 @@
       "required": 0,
       "busy": 0,
       "status": "Key verified",
-      "draw_ticket": "@Icon_Crack",
+      "draw_ticket": "sX9AQR3",
       "saved": [
         "@Icon_Crack"
       ],
       "detach": 0,
       "network_calls": 0,
+      "runtime_offsets": [
+        120966872,
+        119760296,
+        230343480,
+        218250664
+      ],
+      "runtime_ready": 1,
       "case": "invalid-then-valid"
     }
   ],
   "phone_tested": false,
+  "original_monitor_virtual_seconds": 30,
   "real_renderer_and_menu_body_auth_guards_verified": true,
-  "previous_build_failure_reproduced": {
+  "original_runtime_parser_executed_and_configuration_verified": true,
+  "previous_build_missing_runtime_reproduced": {
     "message": "Key verified",
-    "login_hidden": true,
-    "main_menu_authorized": false
+    "main_menu_authorized": true,
+    "runtime_offsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "runtime_ready": false
   }
 }

@@ -1,0 +1,14 @@
+{
+  "game_version": "1.18.12011",
+  "server_version": "11",
+  "offsets": {
+    "Camera_get_main": "0xDBAC338",
+    "NetworkBehaviour_get_isLocalPlayer": "0xD023DA8",
+    "PlayerManager_get_health": "0x735CED8",
+    "HitBox_IsVisible": "0x72365A8"
+  },
+  "draw_ticket": "sX9AQR3",
+  "source_response_sha256": "1990c5a741c384fc749c1aae067577cee0f0f7fadde936d0071d94e8c848a2b9",
+  "server_signature_verified": true,
+  "nonce_verified": true
+}

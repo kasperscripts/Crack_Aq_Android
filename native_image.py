@@ -47,6 +47,13 @@ class Image:
   elif n in ['memset','__memset_chk']:u.mem_write(a[0],bytes([a[1]&255])*a[2]);self.ret(a[0])
   elif n=='syscall' and a[0]==178:self.ret(1234)
   elif n=='clock_gettime':u.mem_write(a[1],struct.pack('<QQ',1000,0));self.ret()
+  elif n=='memchr':
+   pos=bytes(u.mem_read(a[0],a[2])).find(bytes([a[1]&255]));self.ret(a[0]+pos if pos>=0 else 0)
+  elif n=='__errno':self.ret(HOST+0x400100)
+  elif n in ['strtoull','strtoul']:
+   raw=self.cstr(a[0]);base=a[2];v=int(raw,base)
+   if a[1]:u.mem_write(a[1],struct.pack('<Q',a[0]+len(raw)))
+   self.ret(v)
   elif n=='strlen':self.ret(len(self.cstr(a[0])))
   elif n in ['memcmp','strcmp']:
    x,y=(bytes(u.mem_read(a[0],a[2])),bytes(u.mem_read(a[1],a[2]))) if n=='memcmp' else (self.cstr(a[0]),self.cstr(a[1]));self.ret((x>y)-(x<y))

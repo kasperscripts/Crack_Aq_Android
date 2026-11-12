@@ -1,0 +1,29 @@
+{
+  "game_version": "1.18.12011",
+  "addresses": [
+    {
+      "name": "HitBox_IsVisible",
+      "rva": "0x72365A8",
+      "executable_segment": true,
+      "first_16_bytes": "ffc304d1ef3b0b6ded330c6deb2b0d6d"
+    },
+    {
+      "name": "PlayerManager_get_health",
+      "rva": "0x735CED8",
+      "executable_segment": true,
+      "first_16_bytes": "001443bdc0035fd6fe0f1cf8f85f01a9"
+    },
+    {
+      "name": "NetworkBehaviour_get_isLocalPlayer",
+      "rva": "0xD023DA8",
+      "executable_segment": true,
+      "first_16_bytes": "082040f9680000b400294139c0035fd6"
+    },
+    {
+      "name": "Camera_get_main",
+      "rva": "0xDBAC338",
+      "executable_segment": true,
+      "first_16_bytes": "fe0f1ef8f44f01a9d3b400f068827839"
+    }
+  ]
+}

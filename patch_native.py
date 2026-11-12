@@ -4,10 +4,14 @@ import argparse,hashlib,json,struct
 from pathlib import Path
 from keystone import Ks,KS_ARCH_ARM64,KS_MODE_LITTLE_ENDIAN
 SOURCE='3968c47fb3897d4cc676693e16f5e2c69631006c03c011497a1faf372b8b66d7'
-START=0x2c8b3c;LIMIT=0x2c8e00;BAD=0x2c8de0
+START=0x2c8b3c;LIMIT=0x2c8e00;BAD=0x2c8de0;CONFIG=0x2c8d20;DRAW=0x2c8df0
 
 def patch(raw):
  assert hashlib.sha256(raw).hexdigest()==SOURCE,'Unexpected library version'
+ config=json.loads(Path(__file__).with_name('runtime-config.json').read_text())
+ runtime_json=json.dumps({'offsets':config['offsets']},separators=(',',':')).encode()
+ ticket=config['draw_ticket'].encode()
+ assert len(runtime_json)+1<=BAD-CONFIG and len(ticket)+1<=LIMIT-DRAW
  out=bytearray(raw);ks=Ks(KS_ARCH_ARM64,KS_MODE_LITTLE_ENDIAN)
  def code(text,address):return bytes(ks.asm(text,address)[0])
  # Keep the existing thread, VM/context acquisition, mutex and native UI helpers.
@@ -33,10 +37,20 @@ def patch(raw):
  mov x2, #11
  bl 0x52a900
  cbnz w0, rejected
+ add x0, sp, #0xb8
+ adrp x1, 0x2c8000
+ add x1, x1, #0xd20
+ mov w2, #{len(runtime_json)}
+ bl 0x3647cc
+ add x0, sp, #0xb8
+ bl 0x2da0bc
+ add x0, sp, #0xb8
+ bl 0x52aa20
  adrp x0, 0x5c8000
  add x0, x0, #0xa88
- mov x1, x20
- bl 0x52aa50
+ adrp x1, 0x2c8000
+ add x1, x1, #0xdf0
+ bl 0x52ab20
  adrp x0, 0x5c8000
  add x0, x0, #0xab8
  adrp x1, 0x131000
@@ -115,26 +129,23 @@ def patch(raw):
  elf=ELFFile(io.BytesIO(raw));syms=elf.get_section_by_name('.dynsym')
  imports={syms.get_symbol(r['r_info_sym']).name:elf.get_section_by_name('.plt')['sh_addr']+32+16*i for i,r in enumerate(elf.get_section_by_name('.rela.plt').iter_relocations())}
  asm=asm.replace('bl 0x52a900',f"bl {imports['memcmp']}")
- body=code(asm,START);assert START+len(body)<=BAD
+ body=code(asm,START);assert START+len(body)<=CONFIG
  out[START:LIMIT]=code('nop',START)*((LIMIT-START)//4)
  out[START:START+len(body)]=body
  out[BAD:BAD+12]=b'Invalid key\0'
+ out[CONFIG:CONFIG+len(runtime_json)+1]=runtime_json+b'\0'
+ out[DRAW:DRAW+len(ticket)+1]=ticket+b'\0'
  # The only text changes: key hint and contact in the existing instruction line.
  for address,old,new in [(0x12de26,b'Enter license key...',b'@Icon_Crack'),(0x12f196,b'Enter your key and tap Login',b'https://t.me/Icon_Crack')]:
   assert raw[address:address+len(old)+1]==old+b'\0';assert len(new)<=len(old)
   out[address:address+len(old)+1]=new+bytes(len(old)+1-len(new))
  assert raw[0x2a6ce0:0x2a6ce4]==code('mov w2, #0x1c',0x2a6ce0)
  out[0x2a6ce0:0x2a6ce4]=code('mov w2, #23',0x2a6ce0)
- # The original menu requires an authenticated state, its matching cookie,
- # and the hash of a nonempty draw ticket. Use the local key as that ticket.
- ticket_hash=0xdc88773a7fbb0d0b
- hash_delta=0xf14b65a0bf38c7bf
- va=0x5b14e8
- off=next(va-p['p_vaddr']+p['p_offset'] for p in elf.iter_segments() if p['p_type']=='PT_LOAD' and p['p_vaddr']<=va<p['p_vaddr']+p['p_filesz'])
- assert (struct.unpack_from('<Q',raw,off)[0]+hash_delta)&((1<<64)-1)==0x1e1394ec639b00a4
- assert not any(r['r_offset']==va for r in elf.get_section_by_name('.rela.dyn').iter_relocations())
- struct.pack_into('<Q',out,off,(ticket_hash-hash_delta)&((1<<64)-1))
+ # Restore the original runtime initializer before the original draw ticket.
+ ticket_hash=0xcbf29ce484222325
+ for value in ticket:ticket_hash=((ticket_hash^value)*0x100000001b3)&((1<<64)-1)
+ assert ticket_hash==0x1e1394ec639b00a4
  assert len(out)==len(raw)
- return bytes(out),{'source_sha256':SOURCE,'patched_sha256':hashlib.sha256(out).hexdigest(),'library_size':len(out),'auth_patch_start':hex(START),'auth_patch_end':hex(LIMIT),'auth_code_bytes':len(body),'key':'@Icon_Crack','telegram':'https://t.me/Icon_Crack','game_code_changed':False,'private_server_key_embedded':False,'draw_ticket_hash':hex(ticket_hash),'auth_state':hex(0xa7e31f92ce4d8ba6),'menu_ticket_constant_va':hex(va)}
+ return bytes(out),{'source_sha256':SOURCE,'patched_sha256':hashlib.sha256(out).hexdigest(),'library_size':len(out),'auth_patch_start':hex(START),'auth_patch_end':hex(LIMIT),'auth_code_bytes':len(body),'key':'@Icon_Crack','telegram':'https://t.me/Icon_Crack','game_code_changed':False,'private_server_key_embedded':False,'draw_ticket_hash':hex(ticket_hash),'auth_state':hex(0xa7e31f92ce4d8ba6),'original_menu_ticket_verifier_preserved':True,'runtime_configuration_restored':True}
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('output',type=Path);p.add_argument('--report',type=Path,required=True);a=p.parse_args();result,report=patch(a.source.read_bytes());a.output.write_bytes(result);a.report.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
