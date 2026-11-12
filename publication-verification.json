@@ -1,74 +1,90 @@
 {
   "assets": [
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/apk-ci-verification.json",
-      "digest": "sha256:0edba438e4207c112a9bec978401499c4dd9a95f34b4ff67ddb84fbf7f0e1ee2",
-      "id": 739645145,
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/apk-ci-verification.json",
+      "digest": "sha256:06dd52d00717544726df884857a0b9faa1e00e25b1b91da2f9dd3499c68e91e9",
+      "id": 740011175,
       "name": "apk-ci-verification.json",
-      "size": 330,
+      "size": 357,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/AQ_Icon_Crack_v3.zip",
-      "digest": "sha256:d21505f827c814416db392d3f28bdc608eecefc2771820800ed81413d10cd0fb",
-      "id": 739645140,
-      "name": "AQ_Icon_Crack_v3.zip",
-      "size": 1970619515,
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/AQ_Icon_Crack_v4.zip",
+      "digest": "sha256:29efd66dede064ef1bd895f38f58dc1aa4646e753d729c4a010718c9d3ca4aee",
+      "id": 740011177,
+      "name": "AQ_Icon_Crack_v4.zip",
+      "size": 1970619962,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/native-ci-verification.json",
-      "digest": "sha256:d3c16ee54ffc0b73676d732b5c8657c4377dc7fe0ea4562b7b387b556d73ec77",
-      "id": 739645147,
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/layout-ci-verification.json",
+      "digest": "sha256:92b8d8fc61822e86833367530ee8eb9b1f7a87d8b69fa5c38718cd622d2f46db",
+      "id": 740011216,
+      "name": "layout-ci-verification.json",
+      "size": 140,
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/native-ci-verification.json",
+      "digest": "sha256:9f270393a43e6b20ff4a4464d1f66a1fa37a281ebce2771c48083bca7e256934",
+      "id": 740011183,
       "name": "native-ci-verification.json",
-      "size": 5160,
+      "size": 4947,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/packaging-ci-verification.json",
-      "digest": "sha256:6f99c0e0b9b7727aa4ede6a19bcb9de7fb40825049b730ebb80c7ac0782736d8",
-      "id": 739645202,
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/packaging-ci-verification.json",
+      "digest": "sha256:ca4db5d0359c2e1d5c02cea20a3d334596be623d2da7345a4acf89d16ded3d88",
+      "id": 740011210,
       "name": "packaging-ci-verification.json",
       "size": 346,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/runtime-address-ci-verification.json",
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/runtime-address-ci-verification.json",
       "digest": "sha256:b5b33d516175b1c47f3c4357b632429b27e5712c7dfdf4e59a14716200741229",
-      "id": 739645204,
+      "id": 740011215,
       "name": "runtime-address-ci-verification.json",
       "size": 745,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/SHA256SUMS",
-      "digest": "sha256:0768e587eaff1ce58efd4ec8b85cadaacc336b337fb0cdddda8be6a98ff72e3a",
-      "id": 739645142,
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/SHA256SUMS",
+      "digest": "sha256:1bc756c2dc9b8250c610c415f57b4fd156ec62f187f641b9d987f17bc94687a6",
+      "id": 740011178,
       "name": "SHA256SUMS",
       "size": 171,
       "state": "uploaded"
     },
     {
-      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v3/signature-ci-verification.txt",
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/signature-ci-verification.txt",
       "digest": "sha256:922cf3ff1daddc47a5e660973aed5b272c4c72fbbad21155a48c554928f411d9",
-      "id": 739645139,
+      "id": 740011181,
       "name": "signature-ci-verification.txt",
       "size": 1023,
       "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/download/aq-icon-crack-v4/startup-ci-verification.json",
+      "digest": "sha256:fa32e355971cc4c84ccf943e91f55ec945a872a99cc631ec36da2ea34163df88",
+      "id": 740011224,
+      "name": "startup-ci-verification.json",
+      "size": 1035,
+      "state": "uploaded"
     }
   ],
-  "html_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/tag/aq-icon-crack-v3",
-  "id": 443000040,
-  "workflow_run": "https://github.com/kasperscripts/Crack_Aq_Android/actions/runs/43229556695",
+  "html_url": "https://github.com/kasperscripts/Crack_Aq_Android/releases/tag/aq-icon-crack-v4",
+  "id": 443138819,
+  "workflow_run": "https://github.com/kasperscripts/Crack_Aq_Android/actions/runs/43248362653",
   "workflow_conclusion": "success",
-  "tested_commit": "33572b27b4731cc060f5e83defdcade1bebfbd5c",
+  "tested_commit": "7bce2935d38fa2b1eca8fb7ca9baacbd2e71e15e",
   "public_download_ranges_verified": [
     {
       "offset": 0,
       "bytes_checked": 128
     },
     {
-      "offset": 1970619387,
+      "offset": 1970619834,
       "bytes_checked": 128
     }
   ]

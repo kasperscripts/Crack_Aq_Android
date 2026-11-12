@@ -1,9 +1,9 @@
 {
   "format": "ZIP64",
-  "zip_size": 1970619515,
-  "zip_sha256": "d21505f827c814416db392d3f28bdc608eecefc2771820800ed81413d10cd0fb",
-  "apk_size": 2200559170,
-  "apk_sha256": "0eb429428429d26957a0024885a256f209599a7872f8f41e0c225e20d9b831ec",
+  "zip_size": 1970619962,
+  "zip_sha256": "29efd66dede064ef1bd895f38f58dc1aa4646e753d729c4a010718c9d3ca4aee",
+  "apk_size": 2200541074,
+  "apk_sha256": "a4445e05b6708d589bbec9da5b1a6bb5583488c2a7530b5d6131b7b67085f158",
   "full_python_extraction_sha256_verified": true,
   "full_java_extraction_sha256_crc_verified": true
 }
