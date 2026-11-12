@@ -1,0 +1,75 @@
+name: Verify and publish AQ Icon Crack
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - name: Check out the pinned build
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Fetch the signed archive
+        run: |
+          GIT_LFS_SKIP_SMUDGE=0 git -c credential.helper='!gh auth git-credential' lfs pull --include='artifacts/AQ_Icon_Crack.zip' --exclude=''
+          mkdir -p work
+          mv artifacts/AQ_Icon_Crack.zip work/AQ_Icon_Crack.zip
+      - name: Verify the complete download and extract the APK
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,zipfile
+          from pathlib import Path
+          package=json.loads(Path('packaging-verification.json').read_text())
+          apk=json.loads(Path('apk-verification.json').read_text())
+          source=Path('work/AQ_Icon_Crack.zip')
+          with source.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==package['zip_sha256']
+          assert source.stat().st_size==package['zip_size']
+          with zipfile.ZipFile(source) as z:
+              assert z.namelist()==['AQ_Icon_Crack.apk']
+              z.extract('AQ_Icon_Crack.apk','work')
+          with Path('work/AQ_Icon_Crack.apk').open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==apk['apk_sha256']
+          with zipfile.ZipFile('work/AQ_Icon_Crack.apk') as z:Path('work/libAQR.so').write_bytes(z.read('lib/arm64-v8a/libAQR.so'))
+          PY
+          python3 verify_apk.py work/AQ_Icon_Crack.apk --report work/apk-ci-verification.json
+      - name: Check ZIP64 with independent extractors
+        run: |
+          python3 - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          r=json.loads(Path('apk-verification.json').read_text())
+          subprocess.run(['java','-Xmx256m','VerifyArchive.java','work/AQ_Icon_Crack.zip',r['apk_sha256'],str(r['apk_size'])],check=True)
+          PY
+          unzip -t work/AQ_Icon_Crack.zip
+      - name: Check APK signing and library alignment
+        run: |
+          python3 - <<'PY'
+          import os,subprocess
+          from pathlib import Path
+          sdk=Path(os.environ['ANDROID_HOME'])/'build-tools'
+          signer=sorted(sdk.glob('*/apksigner'))[-1]
+          with Path('work/signature-ci-verification.txt').open('w') as out:
+              subprocess.run([str(signer),'verify','--min-sdk-version','25','--verbose','--print-certs','work/AQ_Icon_Crack.apk'],stdout=out,check=True)
+          subprocess.run([str(signer.parent/'zipalign'),'-c','-P','16','4','work/AQ_Icon_Crack.apk'],check=True)
+          PY
+      - name: Execute native authentication and menu checks
+        run: |
+          python3 -m venv work/venv
+          work/venv/bin/pip install --disable-pip-version-check -r requirements-native.txt
+          work/venv/bin/python verify_auth.py work/libAQR.so --report work/native-ci-verification.json
+      - name: Publish the verified archive
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('packaging-verification.json').read_text())
+          Path('work/SHA256SUMS').write_text(r['zip_sha256']+'  AQ_Icon_Crack.zip\n'+r['apk_sha256']+'  AQ_Icon_Crack.apk\n')
+          PY
+          gh release upload aq-icon-crack-v1 work/AQ_Icon_Crack.zip work/SHA256SUMS work/native-ci-verification.json work/apk-ci-verification.json work/signature-ci-verification.txt

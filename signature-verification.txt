@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Icon_Crack
+Signer #1 certificate SHA-256 digest: 5fe9cea48690773d6fe2d2b3234cdc5da67ebf2e6caddaba338755d0166fb0e3
+Signer #1 certificate SHA-1 digest: 5f974aa3b03eeabb1c558a1765358cacc980414c
+Signer #1 certificate MD5 digest: df748566721945ebefa790215999b8cb
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 6ed835a1d9a3e1b6b036b8bd6eaaf3b51ebb546e08b460f69dbdb24d9858b06b
+Signer #1 public key SHA-1 digest: 112b9c3e03e66159d780ad165b4cdfd65f2433d6
+Signer #1 public key MD5 digest: 943f3d3ca4d1bc4b99c0033dfaefae4d

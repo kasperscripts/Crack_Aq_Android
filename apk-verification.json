@@ -1,0 +1,10 @@
+{
+  "apk_size": 2200559170,
+  "apk_sha256": "c86417cbce75d6801fc167cf1d1c48339cfa2f265e913fb59877f856e80c28da",
+  "preserved_compressed_entries_verified": 1750,
+  "changed_entry": "lib/arm64-v8a/libAQR.so",
+  "obsolete_source_stamp_removed_by_signer": [
+    "stamp-cert-sha256"
+  ],
+  "manifest_dex_game_assets_and_other_native_libraries_preserved": true
+}

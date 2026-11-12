@@ -1,0 +1,159 @@
+{
+  "library_sha256": "19b5bae9497a7848e03cc8b7f02db13557789ec5a33fe4ae66c56de6e6535870",
+  "cases_passed": 12,
+  "cases": [
+    {
+      "case": "initial-contact-prompt",
+      "contact": "https://t.me/Icon_Crack"
+    },
+    {
+      "input": "@Icon_Crack",
+      "heap_string": false,
+      "already_attached": true,
+      "valid": true,
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "@Icon_Crack",
+      "heap_string": true,
+      "already_attached": true,
+      "valid": true,
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "@Icon_Crack",
+      "heap_string": false,
+      "already_attached": false,
+      "valid": true,
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 1,
+      "network_calls": 0
+    },
+    {
+      "input": "@Icon_Crac",
+      "heap_string": false,
+      "already_attached": true,
+      "valid": false,
+      "required": 1,
+      "busy": 0,
+      "status": "Invalid key",
+      "error": "Invalid key",
+      "saved": [],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "@icon_crack",
+      "heap_string": false,
+      "already_attached": true,
+      "valid": false,
+      "required": 1,
+      "busy": 0,
+      "status": "Invalid key",
+      "error": "Invalid key",
+      "saved": [],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "@Icon_Crackx",
+      "heap_string": false,
+      "already_attached": true,
+      "valid": false,
+      "required": 1,
+      "busy": 0,
+      "status": "Invalid key",
+      "error": "Invalid key",
+      "saved": [],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "",
+      "heap_string": false,
+      "already_attached": true,
+      "valid": false,
+      "required": 1,
+      "busy": 0,
+      "status": "Invalid key",
+      "error": "Invalid key",
+      "saved": [],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "input": "4096-byte invalid key",
+      "heap_string": true,
+      "already_attached": true,
+      "valid": false,
+      "required": 1,
+      "busy": 0,
+      "status": "Invalid key",
+      "error": "Invalid key",
+      "saved": [],
+      "detach": 0,
+      "network_calls": 0
+    },
+    {
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 0,
+      "network_calls": 0,
+      "case": "application-context-fallback",
+      "already_attached": true
+    },
+    {
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 1,
+      "network_calls": 0,
+      "case": "application-context-fallback",
+      "already_attached": false
+    },
+    {
+      "required": 0,
+      "busy": 0,
+      "status": "Key verified",
+      "error": "",
+      "saved": [
+        "@Icon_Crack"
+      ],
+      "detach": 0,
+      "network_calls": 0,
+      "case": "invalid-then-valid"
+    }
+  ],
+  "phone_tested": false
+}
