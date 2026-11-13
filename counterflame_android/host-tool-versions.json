@@ -1,0 +1,8 @@
+{
+  "enjarify_commit": "f2db0563aa83885ce6e6acd5b7dc9a8a1a1e1987",
+  "json_jar_url": "https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303.jar",
+  "json_jar_sha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed",
+  "jadx_jar_sha256": "05b8f908d6f5cdde2e5fae25e87c2d74095ca2e0fc1ef6aa8aa9b9619ecc3cb3",
+  "enjarify_archive_sha256": "3d5c4672569a1d8d16b6335a7635bc35b403876590b29f544c3cd1fdb13791ca",
+  "enjarify_archive_url": "https://codeload.github.com/google/enjarify/zip/f2db0563aa83885ce6e6acd5b7dc9a8a1a1e1987"
+}

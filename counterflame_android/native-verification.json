@@ -1,0 +1,166 @@
+{
+  "original_sha256": "e8cc671fa8025500fe751b978d24333869307a26dd0691f13cca5ec43ad96042",
+  "native_sha256": "e560292af2b9075a52b04fb585a5e2636ca07bd28b4577d5faf9b93bf10a64e0",
+  "native_size": 2671372,
+  "display": "@Icon_Crack бай бай жирный",
+  "telegram_target": "https://t.me/Icon_Crack",
+  "new_read_only_segment": {
+    "file_offset": 2670592,
+    "virtual_address": 2818048,
+    "size": 780,
+    "alignment": 16384
+  },
+  "jni_onload_code_unchanged": true,
+  "original_load_segments_unchanged": true,
+  "patches": [
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x13998c",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x1947a8",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x194fc8",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x198d2c",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x19928c",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x199f5c",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x19d170",
+      "size": 8
+    },
+    {
+      "kind": "ui_literal_reference",
+      "address": "0x19f460",
+      "size": 8
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282010",
+      "new": "0x2b008d"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282018",
+      "new": "0x2b00cf"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282020",
+      "new": "0x2b0105"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282028",
+      "new": "0x2b014d"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282050",
+      "new": "0x2b0185"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282058",
+      "new": "0x2b01e1"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282060",
+      "new": "0x2b0234"
+    },
+    {
+      "kind": "localized_ui_string_pointer",
+      "address": "0x282068",
+      "new": "0x2b02ac"
+    }
+  ],
+  "literal_targets": [
+    {
+      "old_va": 391792,
+      "new_va": 2818048,
+      "text": "@Icon_Crack бай бай жирный"
+    },
+    {
+      "old_va": 343060,
+      "new_va": 2818087,
+      "text": "am start -a android.intent.action.VIEW -d 'https://t.me/Icon_Crack' >/dev/null 2>&1 &"
+    },
+    {
+      "old_va": 409122,
+      "new_va": 2818048,
+      "text": "@Icon_Crack бай бай жирный"
+    },
+    {
+      "old_va": 374186,
+      "new_va": 2818173,
+      "text": "t.me/Icon_Crack"
+    },
+    {
+      "old_va": 362979,
+      "new_va": 2818189,
+      "text": "Tên thay thế (trống: @Icon_Crack бай бай жирный)"
+    },
+    {
+      "old_va": 355378,
+      "new_va": 2818255,
+      "text": "Alias (empty: @Icon_Crack бай бай жирный)"
+    },
+    {
+      "old_va": 355403,
+      "new_va": 2818309,
+      "text": "Псевдоним (пусто: @Icon_Crack бай бай жирный)"
+    },
+    {
+      "old_va": 340081,
+      "new_va": 2818381,
+      "text": "Takma ad (boş: @Icon_Crack бай бай жирный)"
+    },
+    {
+      "old_va": 363032,
+      "new_va": 2818437,
+      "text": "Áp dụng khi bật Ẩn tên. Để trống dùng @Icon_Crack бай бай жирный."
+    },
+    {
+      "old_va": 385391,
+      "new_va": 2818529,
+      "text": "Used when Hide name is on. Leave empty for @Icon_Crack бай бай жирный."
+    },
+    {
+      "old_va": 406038,
+      "new_va": 2818612,
+      "text": "Используется при скрытии имён. Пустое поле: @Icon_Crack бай бай жирный."
+    },
+    {
+      "old_va": 388594,
+      "new_va": 2818732,
+      "text": "Adı gizle açıkken kullanılır. @Icon_Crack бай бай жирный için boş bırakın."
+    }
+  ],
+  "aslr_instruction_execution_verified_bases": [
+    "0x100000000",
+    "0x7000000000"
+  ],
+  "native_changes_limited_to_literal_references_relocations_and_read_only_segment": true,
+  "localized_pointer_relocations_verified": true,
+  "android_device_execution_tested": false
+}

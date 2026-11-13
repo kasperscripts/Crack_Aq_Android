@@ -1,0 +1,122 @@
+[
+  {
+    "kind": "adrp_add",
+    "adrp": 1284492,
+    "pc": 1284496,
+    "target": 391792,
+    "text": "Raven iOS",
+    "operand": "x9, x9, #0xa70"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1656744,
+    "pc": 1656748,
+    "target": 391792,
+    "text": "Raven iOS",
+    "operand": "x8, x8, #0xa70"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1658824,
+    "pc": 1658828,
+    "target": 391792,
+    "text": "Raven iOS",
+    "operand": "x8, x8, #0xa70"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1674540,
+    "pc": 1674544,
+    "target": 343060,
+    "text": "am start -a android.intent.action.VIEW -d 'https://t.me/RAVENiOSPORTAL' >/dev/null 2>&1 &",
+    "operand": "x0, x0, #0xc14"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1675916,
+    "pc": 1675920,
+    "target": 409122,
+    "text": "RAVEN",
+    "operand": "x22, x22, #0xe22"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1679196,
+    "pc": 1679200,
+    "target": 409122,
+    "text": "RAVEN",
+    "operand": "x1, x1, #0xe22"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1692016,
+    "pc": 1692020,
+    "target": 409122,
+    "text": "RAVEN",
+    "operand": "x1, x1, #0xe22"
+  },
+  {
+    "kind": "adrp_add",
+    "adrp": 1700960,
+    "pc": 1700964,
+    "target": 374186,
+    "text": "t.me/RAVENiOSPORTAL",
+    "operand": "x0, x0, #0x5aa"
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215744,
+    "relocation_address": 2629648,
+    "target": 362979,
+    "text": "T\u00ean thay th\u1ebf (tr\u1ed1ng: Raven iOS)"
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215768,
+    "relocation_address": 2629656,
+    "target": 355378,
+    "text": "Alias (empty: Raven iOS)"
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215792,
+    "relocation_address": 2629664,
+    "target": 355403,
+    "text": "\u041f\u0441\u0435\u0432\u0434\u043e\u043d\u0438\u043c (\u043f\u0443\u0441\u0442\u043e: Raven iOS)"
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215816,
+    "relocation_address": 2629672,
+    "target": 340081,
+    "text": "Takma ad (bo\u015f: Raven iOS)"
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215936,
+    "relocation_address": 2629712,
+    "target": 363032,
+    "text": "\u00c1p d\u1ee5ng khi b\u1eadt \u1ea8n t\u00ean. \u0110\u1ec3 tr\u1ed1ng d\u00f9ng Raven iOS."
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215960,
+    "relocation_address": 2629720,
+    "target": 385391,
+    "text": "Used when Hide name is on. Leave empty for Raven iOS."
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 215984,
+    "relocation_address": 2629728,
+    "target": 406038,
+    "text": "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u043f\u0440\u0438 \u0441\u043a\u0440\u044b\u0442\u0438\u0438 \u0438\u043c\u0451\u043d. \u041f\u0443\u0441\u0442\u043e\u0435 \u043f\u043e\u043b\u0435: Raven iOS."
+  },
+  {
+    "kind": "relocation",
+    "file_offset": 216008,
+    "relocation_address": 2629736,
+    "target": 388594,
+    "text": "Ad\u0131 gizle a\u00e7\u0131kken kullan\u0131l\u0131r. Raven iOS i\u00e7in bo\u015f b\u0131rak\u0131n."
+  }
+]

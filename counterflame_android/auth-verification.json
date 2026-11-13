@@ -1,0 +1,17 @@
+{
+  "actual_signed_apk_dex_executed_on_jvm": true,
+  "key": "@Icon_Crack",
+  "only_exact_key_accepted": true,
+  "new_install_requires_key": true,
+  "vip_tier_and_all_native_feature_gates_initialized": true,
+  "native_feature_csv": "*",
+  "license_expiry": 4102444799,
+  "session_refresh_verified": true,
+  "one_refresh_loop_preserved": true,
+  "cached_restart_verified": true,
+  "device_proof_identity_persisted": true,
+  "invalid_cache_returns_key_prompt": true,
+  "no_license_server_requests": true,
+  "provided_paid_key_embedded": false,
+  "physical_android_device_tested": false
+}

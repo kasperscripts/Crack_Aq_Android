@@ -1,0 +1,18 @@
+{
+  "key": "@Icon_Crack",
+  "display": "@Icon_Crack бай бай жирный",
+  "replaced_auth_method": "CFAuth.post",
+  "original_bootstrap_activation_apply_session_and_refresh_retained": true,
+  "profile": {
+    "ok": true,
+    "access_token": "@Icon_Crack",
+    "expires_in": 300,
+    "refresh_after": 60,
+    "license": {
+      "tier": "vip",
+      "expires_at": 4102444799,
+      "features": null
+    }
+  },
+  "java_telegram_target": "https://t.me/Icon_Crack"
+}

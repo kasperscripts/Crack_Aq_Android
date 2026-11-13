@@ -1,0 +1,93 @@
+[
+  {
+    "name": "classes2.dex",
+    "size": 3130836,
+    "compressed_size": 980087,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libFirebaseCppApp-12_0_0.so",
+    "size": 6066840,
+    "compressed_size": 1582212,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libFirebaseCppAuth.so",
+    "size": 205272,
+    "compressed_size": 56228,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libFirebaseCppDatabase.so",
+    "size": 151424,
+    "compressed_size": 41062,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/lib_burst_generated.so",
+    "size": 155440,
+    "compressed_size": 41784,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libil2cpp.so",
+    "size": 64429368,
+    "compressed_size": 19607768,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libmain.so",
+    "size": 6082312,
+    "compressed_size": 3595420,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libmain_orig.so",
+    "size": 10416,
+    "compressed_size": 2624,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libnative-googlesignin.so",
+    "size": 284752,
+    "compressed_size": 102894,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "lib/arm64-v8a/libunity.so",
+    "size": 18457936,
+    "compressed_size": 7831940,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "classes.dex",
+    "size": 8268568,
+    "compressed_size": 3263696,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "classes4.dex",
+    "size": 18152,
+    "compressed_size": 9703,
+    "method": 8,
+    "flags": 0
+  },
+  {
+    "name": "classes3.dex",
+    "size": 43584,
+    "compressed_size": 22591,
+    "method": 8,
+    "flags": 0
+  }
+]
