@@ -1,0 +1,61 @@
+name: Verify and publish CounterFlame iOS
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Temporary direct URL of the original IPA
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download and verify the original IPA
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          mkdir -p work
+          python3 - <<'PY'
+          import hashlib,json,os,shutil,urllib.request,zipfile
+          from pathlib import Path
+          url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          p=Path('work/original.ipa')
+          with urllib.request.urlopen(url,timeout=240) as r,p.open('wb') as f:shutil.copyfileobj(r,f,16*1024*1024)
+          expected=json.loads(Path('counterflame/source-verification.json').read_text())
+          assert p.stat().st_size==expected['source_size']
+          with p.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==expected['sha256']
+          with zipfile.ZipFile(p) as z:Path('counterflame/cf-menu.dylib').write_bytes(z.read('Payload/CounterFlame.app/Frameworks/cf menu.dylib'))
+          print('Source IPA integrity verified')
+          PY
+      - name: Install native verification dependencies
+        run: |
+          python3 -m venv work/venv
+          work/venv/bin/pip install --disable-pip-version-check -r counterflame/requirements.txt
+      - name: Verify native authentication, cached login, branding and Telegram
+        run: |
+          work/venv/bin/python counterflame/patch_counterflame.py
+          work/venv/bin/python counterflame/verify_counterflame.py
+      - name: Build the standard IPA and compare all files
+        run: |
+          python3 counterflame/build_counterflame.py work/original.ipa work/CounterFlame_Icon_Crack.ipa --report work/counterflame-ipa-verification.json
+          if ! python3 -c "import ctypes.util; assert ctypes.util.find_library('minizip')"; then
+            sudo apt-get update -qq
+            sudo apt-get install -y libminizip1t64
+          fi
+          python3 counterflame/verify_minizip.py work/CounterFlame_Icon_Crack.ipa --report work/counterflame-ipa-verification.json
+          unzip -t work/CounterFlame_Icon_Crack.ipa | tail -1
+      - name: Upload and publish one IPA
+        run: |
+          gh release upload counterflame-ios-icon-crack-v1 work/CounterFlame_Icon_Crack.ipa work/SHA256SUMS work/counterflame-ipa-verification.json counterflame/native-verification.json --clobber
+          gh release edit counterflame-ios-icon-crack-v1 --draft=false --prerelease --title 'CounterFlame iOS 1.4.1 — @Icon_Crack' --notes-file counterflame/release-notes.md

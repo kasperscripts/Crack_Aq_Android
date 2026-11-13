@@ -1,0 +1,32 @@
+[
+  {
+    "path": "Payload/CounterFlame.app/CounterFlame",
+    "size": 172864,
+    "compressed_size": 8514,
+    "magic": "cffaedfe"
+  },
+  {
+    "path": "Payload/CounterFlame.app/Frameworks/cf menu.dylib",
+    "size": 1571664,
+    "compressed_size": 780387,
+    "magic": "cffaedfe"
+  },
+  {
+    "path": "Payload/CounterFlame.app/Frameworks/libsubstrate.dylib",
+    "size": 297968,
+    "compressed_size": 55440,
+    "magic": "cafebabe"
+  },
+  {
+    "path": "Payload/CounterFlame.app/Frameworks/LoadControl.dylib",
+    "size": 10485760,
+    "compressed_size": 3457645,
+    "magic": "cafebabe"
+  },
+  {
+    "path": "Payload/CounterFlame.app/Frameworks/UnityFramework.framework/UnityFramework",
+    "size": 67370944,
+    "compressed_size": 26011217,
+    "magic": "cffaedfe"
+  }
+]

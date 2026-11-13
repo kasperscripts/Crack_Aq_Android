@@ -1,0 +1,25 @@
+{
+  "key": "@Icon_Crack",
+  "display": "@Icon_Crack \u0431\u0430\u0439 \u0431\u0430\u0439 \u0436\u0438\u0440\u043d\u044b\u0439",
+  "data_const_read_only_text_rx_data_rw_enforced": true,
+  "original_activation_callback_state_reproduced": true,
+  "state": {
+    "authenticated": true,
+    "status": 3,
+    "plan": "Premium",
+    "message": "License activated",
+    "expires_at": 4102444799,
+    "checking": false
+  },
+  "keychain_cache_matches_original_callback": true,
+  "cached_launch_local_validation_verified": true,
+  "empty_and_incorrect_keys_rejected": true,
+  "whitespace_trimming_preserved": true,
+  "logout_verified": true,
+  "three_branding_variants_replaced": true,
+  "unrelated_ui_text_preserved": true,
+  "telegram_target": "https://t.me/Icon_Crack",
+  "telegram_opens_only_on_click_via_main_queue": true,
+  "supplied_server_license_embedded": false,
+  "physical_ios_device_tested": false
+}

@@ -1,0 +1,842 @@
+[
+  {
+    "address": "0x12a300",
+    "flags": 1992,
+    "data": "0xbc760",
+    "length": 20,
+    "value": "com.hgbao209.aimauth"
+  },
+  {
+    "address": "0x12a320",
+    "flags": 1992,
+    "data": "0xbc775",
+    "length": 5,
+    "value": "token"
+  },
+  {
+    "address": "0x12a340",
+    "flags": 1992,
+    "data": "0xbc792",
+    "length": 4,
+    "value": "plan"
+  },
+  {
+    "address": "0x12a360",
+    "flags": 1992,
+    "data": "0xbc797",
+    "length": 10,
+    "value": "expires_at"
+  },
+  {
+    "address": "0x12a380",
+    "flags": 1992,
+    "data": "0xbc7c5",
+    "length": 0,
+    "value": ""
+  },
+  {
+    "address": "0x12a3a0",
+    "flags": 1992,
+    "data": "0xbc7ee",
+    "length": 3,
+    "value": "key"
+  },
+  {
+    "address": "0x12a3c0",
+    "flags": 1992,
+    "data": "0xbc7f2",
+    "length": 4,
+    "value": "hwid"
+  },
+  {
+    "address": "0x12a3e0",
+    "flags": 1992,
+    "data": "0xbc7f7",
+    "length": 5,
+    "value": "model"
+  },
+  {
+    "address": "0x12a400",
+    "flags": 1992,
+    "data": "0xbc7fd",
+    "length": 13,
+    "value": "is_jailbroken"
+  },
+  {
+    "address": "0x12a420",
+    "flags": 1992,
+    "data": "0xbc80b",
+    "length": 12,
+    "value": "access_token"
+  },
+  {
+    "address": "0x12a440",
+    "flags": 1992,
+    "data": "0xbc818",
+    "length": 7,
+    "value": "session"
+  },
+  {
+    "address": "0x12a460",
+    "flags": 1992,
+    "data": "0xbc820",
+    "length": 13,
+    "value": "license_token"
+  },
+  {
+    "address": "0x12a480",
+    "flags": 1992,
+    "data": "0xbc85c",
+    "length": 4,
+    "value": "tier"
+  },
+  {
+    "address": "0x12a4a0",
+    "flags": 1992,
+    "data": "0xbc861",
+    "length": 4,
+    "value": "type"
+  },
+  {
+    "address": "0x12a4c0",
+    "flags": 1992,
+    "data": "0xbc866",
+    "length": 12,
+    "value": "license_type"
+  },
+  {
+    "address": "0x12a4e0",
+    "flags": 1992,
+    "data": "0xbc873",
+    "length": 7,
+    "value": "Premium"
+  },
+  {
+    "address": "0x12a500",
+    "flags": 1992,
+    "data": "0xbc88d",
+    "length": 23,
+    "value": "Key rejected (HTTP %ld)"
+  },
+  {
+    "address": "0x12a520",
+    "flags": 1992,
+    "data": "0xbc8a5",
+    "length": 8,
+    "value": "HTTP %ld"
+  },
+  {
+    "address": "0x12a540",
+    "flags": 1992,
+    "data": "0xbc9c0",
+    "length": 4,
+    "value": "idfv"
+  },
+  {
+    "address": "0x12a560",
+    "flags": 1992,
+    "data": "0xbc9c5",
+    "length": 5,
+    "value": "valid"
+  },
+  {
+    "address": "0x12a580",
+    "flags": 1992,
+    "data": "0xbca2f",
+    "length": 4,
+    "value": "data"
+  },
+  {
+    "address": "0x12a5a0",
+    "flags": 1992,
+    "data": "0xbca34",
+    "length": 4,
+    "value": "%s%s"
+  },
+  {
+    "address": "0x12a5c0",
+    "flags": 1992,
+    "data": "0xbca39",
+    "length": 11,
+    "value": "invalid URL"
+  },
+  {
+    "address": "0x12a5e0",
+    "flags": 1992,
+    "data": "0xbca45",
+    "length": 4,
+    "value": "POST"
+  },
+  {
+    "address": "0x12a600",
+    "flags": 1992,
+    "data": "0xbca4a",
+    "length": 16,
+    "value": "application/json"
+  },
+  {
+    "address": "0x12a620",
+    "flags": 1992,
+    "data": "0xbca5b",
+    "length": 12,
+    "value": "Content-Type"
+  },
+  {
+    "address": "0x12a640",
+    "flags": 1992,
+    "data": "0xbca68",
+    "length": 6,
+    "value": "Accept"
+  },
+  {
+    "address": "0x12a660",
+    "flags": 1992,
+    "data": "0xbcaac",
+    "length": 4,
+    "value": "Free"
+  },
+  {
+    "address": "0x12a680",
+    "flags": 1992,
+    "data": "0xbcab1",
+    "length": 4,
+    "value": "%lld"
+  },
+  {
+    "address": "0x12a6a0",
+    "flags": 1992,
+    "data": "0xbcab6",
+    "length": 7,
+    "value": "premium"
+  },
+  {
+    "address": "0x12a6c0",
+    "flags": 1992,
+    "data": "0xbcabe",
+    "length": 3,
+    "value": "pro"
+  },
+  {
+    "address": "0x12a6e0",
+    "flags": 1992,
+    "data": "0xbcac2",
+    "length": 3,
+    "value": "vip"
+  },
+  {
+    "address": "0x12a700",
+    "flags": 1992,
+    "data": "0xbcac6",
+    "length": 4,
+    "value": "paid"
+  },
+  {
+    "address": "0x12a720",
+    "flags": 1992,
+    "data": "0xbcacb",
+    "length": 4,
+    "value": "free"
+  },
+  {
+    "address": "0x12a740",
+    "flags": 1992,
+    "data": "0xbcad0",
+    "length": 5,
+    "value": "basic"
+  },
+  {
+    "address": "0x12a760",
+    "flags": 1992,
+    "data": "0xbcad6",
+    "length": 5,
+    "value": "trial"
+  },
+  {
+    "address": "0x12a780",
+    "flags": 1992,
+    "data": "0xbcadc",
+    "length": 9,
+    "value": "expiresAt"
+  },
+  {
+    "address": "0x12a7a0",
+    "flags": 1992,
+    "data": "0xbcae6",
+    "length": 6,
+    "value": "expiry"
+  },
+  {
+    "address": "0x12a7c0",
+    "flags": 1992,
+    "data": "0xbcaed",
+    "length": 7,
+    "value": "expires"
+  },
+  {
+    "address": "0x12a7e0",
+    "flags": 1992,
+    "data": "0xbcaf5",
+    "length": 10,
+    "value": "expired_at"
+  },
+  {
+    "address": "0x12a800",
+    "flags": 1992,
+    "data": "0xbcb00",
+    "length": 10,
+    "value": "expires_in"
+  },
+  {
+    "address": "0x12a820",
+    "flags": 1992,
+    "data": "0xbcb0b",
+    "length": 7,
+    "value": "message"
+  },
+  {
+    "address": "0x12a840",
+    "flags": 1992,
+    "data": "0xbcb13",
+    "length": 5,
+    "value": "error"
+  },
+  {
+    "address": "0x12a860",
+    "flags": 1992,
+    "data": "0xbcb19",
+    "length": 6,
+    "value": "detail"
+  },
+  {
+    "address": "0x12a880",
+    "flags": 1992,
+    "data": "0xbcb20",
+    "length": 6,
+    "value": "reason"
+  },
+  {
+    "address": "0x12a8a0",
+    "flags": 1992,
+    "data": "0xbdf01",
+    "length": 7,
+    "value": "base64,"
+  },
+  {
+    "address": "0x12a8c0",
+    "flags": 1992,
+    "data": "0xbdf09",
+    "length": 2,
+    "value": "CS"
+  },
+  {
+    "address": "0x12a8e0",
+    "flags": 1992,
+    "data": "0xbe137",
+    "length": 12,
+    "value": "ModMenuImGui"
+  },
+  {
+    "address": "0x12a900",
+    "flags": 1992,
+    "data": "0xd042b",
+    "length": 0,
+    "value": ""
+  },
+  {
+    "address": "0x12a920",
+    "flags": 1992,
+    "data": "0xd055a",
+    "length": 68,
+    "value": "[modmenu] device id: SystemInfo.get_deviceUniqueIdentifier not found"
+  },
+  {
+    "address": "0x12a940",
+    "flags": 1992,
+    "data": "0xd059f",
+    "length": 58,
+    "value": "[modmenu] device id override installed (metadata fallback)"
+  },
+  {
+    "address": "0x12a960",
+    "flags": 1992,
+    "data": "0xd05da",
+    "length": 49,
+    "value": "[modmenu] device id: native entry did not resolve"
+  },
+  {
+    "address": "0x12a980",
+    "flags": 1992,
+    "data": "0xd060c",
+    "length": 53,
+    "value": "[modmenu] device id override installed (data slot %p)"
+  },
+  {
+    "address": "0x12a9a0",
+    "flags": 1992,
+    "data": "0xd0642",
+    "length": 42,
+    "value": "[modmenu] device id regenerated (%u chars)"
+  },
+  {
+    "address": "0x12a9c0",
+    "flags": 1992,
+    "data": "0xd06b9",
+    "length": 16,
+    "value": "cf_device_id.txt"
+  },
+  {
+    "address": "0x12a9e0",
+    "flags": 1992,
+    "data": "0xd06d8",
+    "length": 58,
+    "value": "[modmenu] device id override active: fake_prefix=%@ len=%u"
+  },
+  {
+    "address": "0x12aa00",
+    "flags": 1992,
+    "data": "0xd3db4",
+    "length": 25,
+    "value": "[modmenu] skins store: %@"
+  },
+  {
+    "address": "0x12aa20",
+    "flags": 1992,
+    "data": "0xd3e4b",
+    "length": 56,
+    "value": "[modmenu] inventory definitions: %zu/%zu saved, retrying"
+  },
+  {
+    "address": "0x12aa40",
+    "flags": 1992,
+    "data": "0xd424e",
+    "length": 61,
+    "value": "[modmenu] anti-aim: PlayerSkeleton.LateUpdate pointer swapped"
+  },
+  {
+    "address": "0x12aa60",
+    "flags": 1992,
+    "data": "0xd42e7",
+    "length": 64,
+    "value": "[modmenu] effects: grenade=%s flash=%s smoke=%s hide=%s clear=%s"
+  },
+  {
+    "address": "0x12aa80",
+    "flags": 1992,
+    "data": "0xd437f",
+    "length": 36,
+    "value": "[modmenu] skins: write %@ failed: %@"
+  },
+  {
+    "address": "0x12aaa0",
+    "flags": 1992,
+    "data": "0xd4472",
+    "length": 55,
+    "value": "[modmenu] gloves: prefs=%s save=%s controller=%s set=%s"
+  },
+  {
+    "address": "0x12aac0",
+    "flags": 1992,
+    "data": "0xd5213",
+    "length": 10,
+    "value": "espEnabled"
+  },
+  {
+    "address": "0x12aae0",
+    "flags": 1992,
+    "data": "0xd521e",
+    "length": 10,
+    "value": "boxEnabled"
+  },
+  {
+    "address": "0x12ab00",
+    "flags": 1992,
+    "data": "0xd5229",
+    "length": 7,
+    "value": "boxType"
+  },
+  {
+    "address": "0x12ab20",
+    "flags": 1992,
+    "data": "0xd5231",
+    "length": 12,
+    "value": "boxThickness"
+  },
+  {
+    "address": "0x12ab40",
+    "flags": 1992,
+    "data": "0xd523e",
+    "length": 13,
+    "value": "tracerEnabled"
+  },
+  {
+    "address": "0x12ab60",
+    "flags": 1992,
+    "data": "0xd524c",
+    "length": 12,
+    "value": "tracerOrigin"
+  },
+  {
+    "address": "0x12ab80",
+    "flags": 1992,
+    "data": "0xd5259",
+    "length": 15,
+    "value": "tracerThickness"
+  },
+  {
+    "address": "0x12aba0",
+    "flags": 1992,
+    "data": "0xd5269",
+    "length": 15,
+    "value": "skeletonEnabled"
+  },
+  {
+    "address": "0x12abc0",
+    "flags": 1992,
+    "data": "0xd5279",
+    "length": 17,
+    "value": "skeletonThickness"
+  },
+  {
+    "address": "0x12abe0",
+    "flags": 1992,
+    "data": "0xd528b",
+    "length": 13,
+    "value": "showTeammates"
+  },
+  {
+    "address": "0x12ac00",
+    "flags": 1992,
+    "data": "0xd5299",
+    "length": 8,
+    "value": "showName"
+  },
+  {
+    "address": "0x12ac20",
+    "flags": 1992,
+    "data": "0xd52a2",
+    "length": 12,
+    "value": "showDistance"
+  },
+  {
+    "address": "0x12ac40",
+    "flags": 1992,
+    "data": "0xd52af",
+    "length": 10,
+    "value": "showHealth"
+  },
+  {
+    "address": "0x12ac60",
+    "flags": 1992,
+    "data": "0xd52ba",
+    "length": 11,
+    "value": "maxDistance"
+  },
+  {
+    "address": "0x12ac80",
+    "flags": 1992,
+    "data": "0xd52c6",
+    "length": 13,
+    "value": "silentEnabled"
+  },
+  {
+    "address": "0x12aca0",
+    "flags": 1992,
+    "data": "0xd52d4",
+    "length": 9,
+    "value": "silentFov"
+  },
+  {
+    "address": "0x12acc0",
+    "flags": 1992,
+    "data": "0xd52de",
+    "length": 12,
+    "value": "silentHeight"
+  },
+  {
+    "address": "0x12ace0",
+    "flags": 1992,
+    "data": "0xd52eb",
+    "length": 11,
+    "value": "silentDelay"
+  },
+  {
+    "address": "0x12ad00",
+    "flags": 1992,
+    "data": "0xd52f7",
+    "length": 14,
+    "value": "silentSkipTeam"
+  },
+  {
+    "address": "0x12ad20",
+    "flags": 1992,
+    "data": "0xd5306",
+    "length": 15,
+    "value": "silentWallCheck"
+  },
+  {
+    "address": "0x12ad40",
+    "flags": 1992,
+    "data": "0xd5316",
+    "length": 8,
+    "value": "autoFire"
+  },
+  {
+    "address": "0x12ad60",
+    "flags": 1992,
+    "data": "0xd531f",
+    "length": 10,
+    "value": "triggerBot"
+  },
+  {
+    "address": "0x12ad80",
+    "flags": 1992,
+    "data": "0xd532a",
+    "length": 12,
+    "value": "triggerDelay"
+  },
+  {
+    "address": "0x12ada0",
+    "flags": 1992,
+    "data": "0xd5337",
+    "length": 7,
+    "value": "antiAim"
+  },
+  {
+    "address": "0x12adc0",
+    "flags": 1992,
+    "data": "0xd533f",
+    "length": 7,
+    "value": "antiYaw"
+  },
+  {
+    "address": "0x12ade0",
+    "flags": 1992,
+    "data": "0xd5347",
+    "length": 10,
+    "value": "antiJitter"
+  },
+  {
+    "address": "0x12ae00",
+    "flags": 1992,
+    "data": "0xd5352",
+    "length": 6,
+    "value": "desync"
+  },
+  {
+    "address": "0x12ae20",
+    "flags": 1992,
+    "data": "0xd5359",
+    "length": 9,
+    "value": "antiFlash"
+  },
+  {
+    "address": "0x12ae40",
+    "flags": 1992,
+    "data": "0xd5363",
+    "length": 9,
+    "value": "antiSmoke"
+  },
+  {
+    "address": "0x12ae60",
+    "flags": 1992,
+    "data": "0xd536d",
+    "length": 7,
+    "value": "aimBone"
+  },
+  {
+    "address": "0x12ae80",
+    "flags": 1992,
+    "data": "0xd5375",
+    "length": 11,
+    "value": "skinEnabled"
+  },
+  {
+    "address": "0x12aea0",
+    "flags": 1992,
+    "data": "0xd5381",
+    "length": 7,
+    "value": "skinTab"
+  },
+  {
+    "address": "0x12aec0",
+    "flags": 1992,
+    "data": "0xd5389",
+    "length": 10,
+    "value": "skinWeapon"
+  },
+  {
+    "address": "0x12aee0",
+    "flags": 1992,
+    "data": "0xd5394",
+    "length": 12,
+    "value": "skinRareOnly"
+  },
+  {
+    "address": "0x12af00",
+    "flags": 1992,
+    "data": "0xd53a1",
+    "length": 15,
+    "value": "skinKeepApplied"
+  },
+  {
+    "address": "0x12af20",
+    "flags": 1992,
+    "data": "0xd53b1",
+    "length": 8,
+    "value": "noRecoil"
+  },
+  {
+    "address": "0x12af40",
+    "flags": 1992,
+    "data": "0xd53ba",
+    "length": 13,
+    "value": "bubbleVisible"
+  },
+  {
+    "address": "0x12af60",
+    "flags": 1992,
+    "data": "0xd53c8",
+    "length": 11,
+    "value": "bubbleAlpha"
+  },
+  {
+    "address": "0x12af80",
+    "flags": 1992,
+    "data": "0xd53d4",
+    "length": 7,
+    "value": "bubbleX"
+  },
+  {
+    "address": "0x12afa0",
+    "flags": 1992,
+    "data": "0xd53dc",
+    "length": 7,
+    "value": "bubbleY"
+  },
+  {
+    "address": "0x12afc0",
+    "flags": 1992,
+    "data": "0xd53e4",
+    "length": 16,
+    "value": "fiveFingerToggle"
+  },
+  {
+    "address": "0x12afe0",
+    "flags": 1992,
+    "data": "0xd53f5",
+    "length": 15,
+    "value": "inventoryUnlock"
+  },
+  {
+    "address": "0x12b000",
+    "flags": 1992,
+    "data": "0xd5405",
+    "length": 13,
+    "value": "spoofDeviceId"
+  },
+  {
+    "address": "0x12b020",
+    "flags": 1992,
+    "data": "0xd5413",
+    "length": 15,
+    "value": "bypassAntiCheat"
+  },
+  {
+    "address": "0x12b040",
+    "flags": 1992,
+    "data": "0xd5423",
+    "length": 8,
+    "value": "language"
+  },
+  {
+    "address": "0x12b060",
+    "flags": 1992,
+    "data": "0xd542c",
+    "length": 10,
+    "value": "colorEnemy"
+  },
+  {
+    "address": "0x12b080",
+    "flags": 1992,
+    "data": "0xd5437",
+    "length": 13,
+    "value": "colorTeammate"
+  },
+  {
+    "address": "0x12b0a0",
+    "flags": 1992,
+    "data": "0xd5445",
+    "length": 8,
+    "value": "colorBot"
+  },
+  {
+    "address": "0x12b0c0",
+    "flags": 1992,
+    "data": "0xd544e",
+    "length": 11,
+    "value": "colorTracer"
+  },
+  {
+    "address": "0x12b0e0",
+    "flags": 1992,
+    "data": "0xd545a",
+    "length": 9,
+    "value": "Documents"
+  },
+  {
+    "address": "0x12b100",
+    "flags": 1992,
+    "data": "0xd5464",
+    "length": 12,
+    "value": "hgbao209.txt"
+  },
+  {
+    "address": "0x12b120",
+    "flags": 1992,
+    "data": "0xd5471",
+    "length": 19,
+    "value": "hgbao209_skins.json"
+  },
+  {
+    "address": "0x12b140",
+    "flags": 1992,
+    "data": "0xe2a56",
+    "length": 1044,
+    "value": "#include <metal_stdlib>\nusing namespace metal;\n\nstruct Uniforms {\n    float4x4 projectionMatrix;\n};\n\nstruct VertexIn {\n    float2 position  [[attribute(0)]];\n    float2 texCoords [[attribute(1)]];\n    uchar4 color     [[attribute(2)]];\n};\n\nstruct VertexOut {\n    float4 position [[position]];\n    float2 texCoords;\n    float4 color;\n};\n\nvertex VertexOut vertex_main(VertexIn in                 [[stage_in]],\n                             constant Uniforms &uniforms [[buffer(1)]]) {\n    VertexOut out;\n    out.position = uniforms.projectionMatrix * float4(in.position, 0, 1);\n    out.texCoords = in.texCoords;\n    out.color = float4(in.color) / float4(255.0);\n    return out;\n}\n\nfragment half4 fragment_main(VertexOut in [[stage_in]],\n                             texture2d<half, access::sample> texture [[texture(0)]]) {\n    constexpr sampler linearSampler(coord::normalized, min_filter::linear, mag_filter::linear, mip_filter::linear);\n    half4 texColor = texture.sample(linearSampler, in.texCoords);\n    return half4(in.color) * texColor;\n}\n"
+  },
+  {
+    "address": "0x12b160",
+    "flags": 1992,
+    "data": "0xe2e6b",
+    "length": 41,
+    "value": "Error: failed to create Metal library: %@"
+  },
+  {
+    "address": "0x12b180",
+    "flags": 1992,
+    "data": "0xe2e95",
+    "length": 11,
+    "value": "vertex_main"
+  },
+  {
+    "address": "0x12b1a0",
+    "flags": 1992,
+    "data": "0xe2ea1",
+    "length": 13,
+    "value": "fragment_main"
+  },
+  {
+    "address": "0x12b1c0",
+    "flags": 1992,
+    "data": "0xe2eaf",
+    "length": 59,
+    "value": "Error: failed to find Metal shader functions in library: %@"
+  },
+  {
+    "address": "0x12b1e0",
+    "flags": 1992,
+    "data": "0xe2eeb",
+    "length": 48,
+    "value": "Error: failed to create Metal pipeline state: %@"
+  }
+]
