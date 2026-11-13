@@ -1,0 +1,20 @@
+{
+  "runtime": {
+    "size": 613000,
+    "original_sha256": "f34b13eb6f6375711be665f3a71d6133f4914e498750c6699d7e21491404591a",
+    "patched_sha256": "1538ce520dc267a63885877c38e7850b2d26234a16c1c7c7ed200919c0dfabe2",
+    "changed_bytes": 64,
+    "changes_only_in_read_only_public_keys": true,
+    "all_machine_instructions_preserved": true,
+    "text_sha256": "4176a468ceafa9f216525e7edd22a5a4917f35f0f97b327b29f4b8e5f1069024"
+  },
+  "payload": {
+    "size": 1923896,
+    "original_sha256": "c624a120f4b13f4d391db2723c3f54f2ad3873e0282827a459e40b8f373e26dc",
+    "patched_sha256": "0f71a355f68d9ebc85fc93cd4a9e404dd31fd6d637998db24a61066cad7b2669",
+    "changed_bytes": 64,
+    "changes_only_in_read_only_public_keys": true,
+    "all_machine_instructions_preserved": true,
+    "text_sha256": "531ec2564f009187c5f7f8d0ff4907cdd51c7c311b5b7bf825a452a5df72a2e8"
+  }
+}
