@@ -23,7 +23,7 @@ jobs:
           result=subprocess.run([str(directory/'apksigner'),'verify','--verbose','--print-certs',apk],check=True,capture_output=True,text=True)
           print(result.stdout)
           assert '1e08a903aef9c3a721510b64ec764d01d3d094eb954161b62544ea8f187b5953' in result.stdout
-          assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in result.stdout
+          assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in result.stdout
           assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in result.stdout
           subprocess.run([str(directory/'zipalign'),'-c','-P','16','4',apk],check=True)
           PY
