@@ -1,0 +1,127 @@
+{
+  "root": {
+    "source_sha256": "3b4c42523a8285dc2038e3f0cb1bd6566d37308c1f951e340f1ba479dc7fbc01",
+    "target_sha256": "981ac3443956ec285d4d6292db0e6f63e88c3e722dbc869c341c9d596bc1bf7d",
+    "size": 8883376,
+    "key_load_address": 7007000,
+    "key_immediate_instructions": [
+      {
+        "offset": 7007000,
+        "before": "1ba88ad2",
+        "after": "1b2889d2"
+      },
+      {
+        "offset": 7007004,
+        "before": "bb4dacf2",
+        "after": "7becadf2"
+      },
+      {
+        "offset": 7007008,
+        "before": "988c8d52",
+        "after": "386c8c52"
+      },
+      {
+        "offset": 7007016,
+        "before": "5baeccf2",
+        "after": "dbedcbf2"
+      },
+      {
+        "offset": 7007040,
+        "before": "9b2decf2",
+        "after": "7b48eef2"
+      },
+      {
+        "offset": 7007044,
+        "before": "780ca072",
+        "after": "780da072"
+      }
+    ],
+    "telegram_strings": [
+      {
+        "offset": 310148,
+        "before": "https://t.me/umbreladlc",
+        "after": "https://t.me/Icon_Crack"
+      },
+      {
+        "offset": 353392,
+        "before": "https://t.me/umbreladlc",
+        "after": "https://t.me/Icon_Crack"
+      },
+      {
+        "offset": 355571,
+        "before": "@umbreladlc",
+        "after": "@Icon_Crack"
+      }
+    ],
+    "branch_instructions_preserved": true,
+    "all_other_native_bytes_preserved": true,
+    "changed_bytes": 45
+  },
+  "nonroot": {
+    "source_sha256": "f7625320d64454035f9c8be048da6debdad7bd3666081bce1c2a82c298b2080a",
+    "target_sha256": "fc239238eed2a73acfb0eaff2e13661412ecc3e482c83fbf68f3fdef52dea071",
+    "size": 8876032,
+    "key_load_address": 7006296,
+    "key_immediate_instructions": [
+      {
+        "offset": 7006296,
+        "before": "1ba88ad2",
+        "after": "1b2889d2"
+      },
+      {
+        "offset": 7006300,
+        "before": "bb4dacf2",
+        "after": "7becadf2"
+      },
+      {
+        "offset": 7006304,
+        "before": "988c8d52",
+        "after": "386c8c52"
+      },
+      {
+        "offset": 7006312,
+        "before": "5baeccf2",
+        "after": "dbedcbf2"
+      },
+      {
+        "offset": 7006336,
+        "before": "9b2decf2",
+        "after": "7b48eef2"
+      },
+      {
+        "offset": 7006340,
+        "before": "780ca072",
+        "after": "780da072"
+      }
+    ],
+    "telegram_strings": [
+      {
+        "offset": 309572,
+        "before": "https://t.me/umbreladlc",
+        "after": "https://t.me/Icon_Crack"
+      },
+      {
+        "offset": 352745,
+        "before": "https://t.me/umbreladlc",
+        "after": "https://t.me/Icon_Crack"
+      },
+      {
+        "offset": 354924,
+        "before": "@umbreladlc",
+        "after": "@Icon_Crack"
+      }
+    ],
+    "branch_instructions_preserved": true,
+    "all_other_native_bytes_preserved": true,
+    "changed_bytes": 45
+  },
+  "root_script": {
+    "filename": "Umbrella_r84_Icon_Crack_root.sh",
+    "size": 12643984,
+    "source_sha256": "a26702a94d76e565791b5dcd30b45db407cf0bb6c0d3c6d80e676ed298641dd9",
+    "sha256": "30f8dcb8de909f64afd9ae516c02ac30c4594ecdfa0e4bc18ae2334b18ec238e",
+    "injector_unchanged": true,
+    "library_hash_checks_updated": 2,
+    "game_process_and_injection_logic_preserved": true
+  }
+}

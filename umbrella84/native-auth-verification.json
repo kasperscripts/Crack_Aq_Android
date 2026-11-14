@@ -1,0 +1,330 @@
+{
+  "root": {
+    "original": {
+      "library_sha256": "3b4c42523a8285dc2038e3f0cb1bd6566d37308c1f951e340f1ba479dc7fbc01",
+      "comparison_paths": 2,
+      "native_activation_state_verified": true,
+      "accepted_key": "@Umbreladlc",
+      "android_runtime_stubbed": false,
+      "isolated_native_blocks": true,
+      "full_game_started": false,
+      "cases": [
+        {
+          "entry": "0x6aebfc",
+          "key": "@Umbreladlc",
+          "accepted": true
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@Icon_Crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Umbreladlc",
+          "accepted": true
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Icon_Crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        }
+      ]
+    },
+    "patched": {
+      "library_sha256": "981ac3443956ec285d4d6292db0e6f63e88c3e722dbc869c341c9d596bc1bf7d",
+      "comparison_paths": 2,
+      "native_activation_state_verified": true,
+      "accepted_key": "@Icon_Crack",
+      "android_runtime_stubbed": false,
+      "isolated_native_blocks": true,
+      "full_game_started": false,
+      "cases": [
+        {
+          "entry": "0x6aebfc",
+          "key": "@Umbreladlc",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@Icon_Crack",
+          "accepted": true
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aebfc",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Umbreladlc",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Icon_Crack",
+          "accepted": true
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6af1a8",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        }
+      ]
+    }
+  },
+  "nonroot": {
+    "original": {
+      "library_sha256": "f7625320d64454035f9c8be048da6debdad7bd3666081bce1c2a82c298b2080a",
+      "comparison_paths": 2,
+      "native_activation_state_verified": true,
+      "accepted_key": "@Umbreladlc",
+      "android_runtime_stubbed": false,
+      "isolated_native_blocks": true,
+      "full_game_started": false,
+      "cases": [
+        {
+          "entry": "0x6ae93c",
+          "key": "@Umbreladlc",
+          "accepted": true
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@Icon_Crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Umbreladlc",
+          "accepted": true
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Icon_Crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        }
+      ]
+    },
+    "patched": {
+      "library_sha256": "fc239238eed2a73acfb0eaff2e13661412ecc3e482c83fbf68f3fdef52dea071",
+      "comparison_paths": 2,
+      "native_activation_state_verified": true,
+      "accepted_key": "@Icon_Crack",
+      "android_runtime_stubbed": false,
+      "isolated_native_blocks": true,
+      "full_game_started": false,
+      "cases": [
+        {
+          "entry": "0x6ae93c",
+          "key": "@Umbreladlc",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@Icon_Crack",
+          "accepted": true
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6ae93c",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Umbreladlc",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Icon_Crack",
+          "accepted": true
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "wrong",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@icon_crack",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@Icon_CrackX",
+          "accepted": false
+        },
+        {
+          "entry": "0x6aeee8",
+          "key": "@ICON_CRACK",
+          "accepted": false
+        }
+      ]
+    }
+  }
+}

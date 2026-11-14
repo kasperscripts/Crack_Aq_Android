@@ -1,0 +1,11 @@
+{
+  "source_sha256": "d1b3ea2956fe787ed4f30f1a5a44d72a42697e9058386804cc454097718a220d",
+  "changed_entries": {
+    "classes7.dex": "e769f6164b4b7d7d698e23244c257d14a600170fcbf89775f974a66400bf8303",
+    "lib/arm64-v8a/libumbrella.so": "fc239238eed2a73acfb0eaff2e13661412ecc3e482c83fbf68f3fdef52dea071",
+    "AndroidManifest.xml": "27d99dba850ae71d333aca4ac1f3323455e9a4fbca764b0e78e7ff61911961d2"
+  },
+  "other_compressed_streams_preserved": true,
+  "version_code": 85,
+  "original_unsigned_library_records_removed": true
+}

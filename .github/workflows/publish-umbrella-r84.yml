@@ -1,0 +1,65 @@
+name: Verify and publish Umbrella r84 root and nonroot
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Direct URL of the original Umbrella APK
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download the pinned original APK
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          mkdir -p work
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,shutil,urllib.request
+          url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          path=Path('work/original.apk')
+          with urllib.request.urlopen(url,timeout=240) as source,path.open('wb') as output:
+              shutil.copyfileobj(source,output,1024*1024)
+          expected=json.loads(Path('umbrella84/apk-verification.json').read_text())
+          assert path.stat().st_size==expected['source_size']
+          with path.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==expected['source_sha256']
+          PY
+      - name: Reconstruct and verify both exact files
+        run: |
+          python3 apply_delta.py work/original.apk artifacts/umbrella-r84-icon1.patch work/Umbrella_r84_Icon_Crack_nonroot.apk
+          python3 umbrella84/verify_release.py work/Umbrella_r84_Icon_Crack_nonroot.apk artifacts/Umbrella_r84_Icon_Crack_root.sh
+          sh -n artifacts/Umbrella_r84_Icon_Crack_root.sh
+          sh artifacts/Umbrella_r84_Icon_Crack_root.sh --help
+      - name: Verify Android signature and page alignment
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os,subprocess
+          tool=sorted((Path(os.environ['ANDROID_HOME'])/'build-tools').glob('*/apksigner'))[-1]
+          apk='work/Umbrella_r84_Icon_Crack_nonroot.apk'
+          result=subprocess.run([str(tool),'verify','--verbose','--print-certs',apk],check=True,capture_output=True,text=True)
+          print(result.stdout)
+          assert '1e08a903aef9c3a721510b64ec764d01d3d094eb954161b62544ea8f187b5953' in result.stdout
+          assert 'Verified using v2 scheme (APK Signature Scheme v2): true' in result.stdout
+          assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in result.stdout
+          subprocess.run([str(tool.parent/'zipalign'),'-c','-P','16','4',apk],check=True)
+          manifest=subprocess.run([str(tool.parent/'aapt'),'dump','badging',apk],check=True,capture_output=True,text=True).stdout
+          assert "name='io.umbrealvirtual.updated' versionCode='85'" in manifest
+          PY
+      - name: Publish separate APK and root script
+        run: |
+          gh release upload umbrella-r84-icon-crack-v1 work/Umbrella_r84_Icon_Crack_nonroot.apk artifacts/Umbrella_r84_Icon_Crack_root.sh umbrella84/SHA256SUMS umbrella84/apk-verification.json umbrella84/root-script-verification.json umbrella84/native-auth-verification.json umbrella84/native-patch-verification.json umbrella84/dex-verification.json --clobber
+          gh release edit umbrella-r84-icon-crack-v1 --draft=false --prerelease --title 'Umbrella r84 — @Icon_Crack, root и без root' --notes-file umbrella84/release-notes.md

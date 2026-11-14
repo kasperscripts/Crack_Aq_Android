@@ -1,0 +1,11 @@
+{
+  "class_count": 59,
+  "changed_classes": [
+    "io/umbrealvirtual/r72/UmbrellaUi.smali"
+  ],
+  "all_other_class_code_and_metadata_preserved": true,
+  "ui_changes_only_string_constants": true,
+  "changed_string_constants": 5,
+  "module_loader_unchanged": true,
+  "clipboard_handler_unchanged": true
+}
