@@ -1,0 +1,27 @@
+{
+  "filename": "Umbrella_r84_Icon_Crack_root_v2.sh",
+  "size": 12647275,
+  "sha256": "1ac0920622b9e6755c743c72e7c51b2115b410f0eb8226010d1f9271676ab1e1",
+  "source_v1_sha256": "30f8dcb8de909f64afd9ae516c02ac30c4594ecdfa0e4bc18ae2334b18ec238e",
+  "embedded": {
+    "cfinject": {
+      "size": 464544,
+      "sha256": "bb63b6e1cee9e9127b8d094ee60a5cf8e07aadec9f111f95f1ffee4c1fc989d3"
+    },
+    "libcfesp.so": {
+      "size": 8883376,
+      "sha256": "981ac3443956ec285d4d6292db0e6f63e88c3e722dbc869c341c9d596bc1bf7d"
+    }
+  },
+  "injector_and_native_library_unchanged_from_v1": true,
+  "directory_label_applied_before_placement": true,
+  "file_staged_and_labelled_before_rename": true,
+  "game_data_fallback": true,
+  "only_own_temporary_paths_modified": true,
+  "global_selinux_policy_modified": false,
+  "device_execution_tested": false,
+  "shell_syntax_passed": true,
+  "help_execution_passed": true,
+  "native_payload_and_digest_checks_verified": true,
+  "placement_fault_cases_passed": 7
+}

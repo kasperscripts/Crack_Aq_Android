@@ -1,0 +1,75 @@
+{
+  "cases": [
+    {
+      "case": "v1_reproduces_copy_permission_denied",
+      "expected_success": false,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_rename_prelabelled_file_with_cp_denied",
+      "expected_success": true,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_primary_denied_uses_game_code_cache",
+      "expected_success": true,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_all_locations_denied_stops_cleanly",
+      "expected_success": false,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_selinux_disabled",
+      "expected_success": true,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_relabel_denied_stops_cleanly",
+      "expected_success": false,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    },
+    {
+      "case": "v2_corrupted_payload_rejected",
+      "expected_success": false,
+      "passed": true,
+      "existing_game_files_preserved": true,
+      "temporary_files_cleaned": true,
+      "android_selinux_modelled": true,
+      "actual_shell_filesystem_and_digest_operations": true,
+      "full_device_tested": false
+    }
+  ],
+  "device_execution_tested": false
+}
