@@ -1,0 +1,11 @@
+{
+  "library": "runtime-local.so",
+  "mode": "nonroot",
+  "strict_memory": true,
+  "actual_java_proof": true,
+  "activation": true,
+  "module_hash": true,
+  "lease_expiry": true,
+  "lease_refresh": true,
+  "tampered_signature_rejected": true
+}

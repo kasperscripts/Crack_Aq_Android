@@ -1,0 +1,7 @@
+{
+  "native_container_signature_and_decryption": true,
+  "tampered_container_rejected": true,
+  "native_ui_decryption": true,
+  "ui_dex_sha256": "b4a0eafdef6707be7242cd4096a6e86ea9fa82ecc9c1c92cf015c0f7d323169c",
+  "logo_preserved": true
+}

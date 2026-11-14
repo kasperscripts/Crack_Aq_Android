@@ -1,0 +1,31 @@
+{
+  "v1_dex_size": 1347080,
+  "v1_dex_limit": 1048576,
+  "v2_dex_limit": 2097152,
+  "original_failure": "invalid_resource_layout",
+  "loader_instructions": [
+    {
+      "address": "0x4e540",
+      "offset": 304448,
+      "before": "0b02a012",
+      "after": "0b04a012",
+      "purpose": "Allow DEX up to 2 MiB while preserving lower bound"
+    },
+    {
+      "address": "0x4e568",
+      "offset": 304488,
+      "before": "eb3b0c32",
+      "after": "eb370b32",
+      "purpose": "Allow DEX up to 2 MiB while preserving lower bound"
+    }
+  ],
+  "payload_code_unchanged_from_v1": true,
+  "v2_dex_size": 1347112,
+  "v1_rejection_reproduced": true,
+  "v2_native_parser_accepts_same_resource": true,
+  "logo_bytes_preserved": true,
+  "profile_context_initialization_order_corrected": true,
+  "menu_revealed_after_initial_placement": true,
+  "counter_tap_toggles_menu": true,
+  "device_execution_tested": false
+}

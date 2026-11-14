@@ -1,5 +1,7 @@
 # Phantom 3.5.85 — @Icon_Crack
 
+**Обновление:** [v2 с исправлением появления меню и инструкцией для LuluBox](v2/README.md). Ниже сохранено описание первой версии.
+
 [Скачать APK одним файлом](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/phantom-3.5.85-icon-crack-v1/Phantom_3.5.85_Icon_Crack.apk)
 
 Ключ: **`@Icon_Crack`**, с учётом регистра; пробелы по краям удаляются. Подпись: **`@Icon_Crack бонпай гей`**. Нажатие на подпись в окне активации или заголовке меню открывает `https://t.me/Icon_Crack`.
