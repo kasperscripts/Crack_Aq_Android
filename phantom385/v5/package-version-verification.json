@@ -1,0 +1,17 @@
+{
+  "changes": [
+    {
+      "attribute": "versionCode",
+      "before": 106,
+      "after": 107
+    },
+    {
+      "attribute": "versionName",
+      "before": "3.5.85-icon4",
+      "after": "3.5.85-icon5"
+    }
+  ],
+  "package_name_preserved": true,
+  "permissions_and_components_preserved": true,
+  "payload_protocol_release": 105
+}

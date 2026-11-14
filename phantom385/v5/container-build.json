@@ -1,0 +1,10 @@
+{
+  "bundle_size": 3853626,
+  "bundle_sha256": "1983e8a5152c6548e76f8e211235c34b0706a947da182e13afbdb6dba7f76ca1",
+  "runtime_sha256": "ff72b0cb3b1fd32504c3ed8813346794107002f576868de6e9cbeb8a7e9d6fa9",
+  "ui_dex_sha256": "175312c62399bdedb4711142a07550c009eaa9790952306caa91292c2bad4279",
+  "logo_sha256": "0eaaa19bd756258eb5ff9d0ecf193e505ebe0f949de88c98bf8af576a87c2e81",
+  "container_public_key": "801e70971ebd44732b80d775f554b470985420479626665ed4b806ee22edc3cf",
+  "auth_key_offset": 46488,
+  "auth_modified_bytes": 32
+}

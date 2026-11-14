@@ -1,0 +1,16 @@
+{
+  "library": "payload-local.so",
+  "mode": "nonroot",
+  "load_base": "0x1000000",
+  "strict_memory": true,
+  "actual_dex_proof": true,
+  "mapped_image_digest_verified": true,
+  "post_start_activation": true,
+  "module_permissions": true,
+  "lease_expiry": true,
+  "lease_refresh": true,
+  "tampered_signature_rejected": true,
+  "modified_native_image_rejected": true,
+  "android_task_directory_unavailable": true,
+  "phone_execution_tested": false
+}

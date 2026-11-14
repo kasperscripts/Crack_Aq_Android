@@ -1,0 +1,10 @@
+{
+  "baseline": "v4",
+  "post_start_image_check_enabled": true,
+  "original_native_accept_executed": true,
+  "proof_image_digest_is_zero": true,
+  "activation_rejected": true,
+  "native_message": "Payload integrity mismatch; restart required",
+  "matched_new_digest": "6a4de84207860e9ffcbde1a93aafb268ab542002eef69a796dd9375e2805cc7726c5bb42dcf7589b6a204129cdee984ea8e1451901a1d3fe06d05938870479ea",
+  "device_execution_tested": false
+}
