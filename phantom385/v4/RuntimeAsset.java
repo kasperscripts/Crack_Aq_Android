@@ -1,0 +1,52 @@
+package dev.icon;
+import android.content.Context;
+import java.io.*;
+import java.security.MessageDigest;
+import org.json.JSONObject;
+import dev.phantom.l.z;
+
+public final class RuntimeAsset {
+    private static final String EXPECTED="BUNDLE_SHA256";
+    private static String attemptedRefresh;
+    public static synchronized boolean needsLuluRefresh(Context context){
+        if(EXPECTED.equals(attemptedRefresh))return false;
+        try{
+            File platform=z.g();File root=new File(platform.getParentFile(),"phantom_nonroot");
+            File index=new File(root,"install.json");if(!index.isFile()||index.length()>32768)return false;
+            ByteArrayOutputStream output=new ByteArrayOutputStream();InputStream input=new FileInputStream(index);
+            try{byte[] buffer=new byte[4096];int count;while((count=input.read(buffer))!=-1){if(output.size()+count>32768)return false;output.write(buffer,0,count);}}finally{input.close();}
+            JSONObject state=new JSONObject(new String(output.toByteArray(),"UTF-8"));
+            if(state.optInt("schema")!=1||state.optBoolean("restored",false)||!"10020d20631ce44f00f106ed8e81a6a731deba217bfbb79d54f20e10584e3787".equals(state.optString("originalSha256")))return false;
+            File active=new File(state.getString("runtime")).getCanonicalFile();
+            if(!root.getCanonicalFile().equals(active.getParentFile())||!active.getName().startsWith("runtime-"))return false;
+            if(valid(new File(active,"bootstrap.bin")))return false;
+            attemptedRefresh=EXPECTED;
+            return true;
+        }catch(Exception unavailable){return false;}
+    }
+    private static boolean valid(File file)throws Exception{
+        if(!file.isFile()||file.length()!=BUNDLE_SIZE)return false;
+        MessageDigest digest=MessageDigest.getInstance("SHA-256");
+        InputStream input=new FileInputStream(file);
+        try{byte[] b=new byte[16384];int n;while((n=input.read(b))!=-1)digest.update(b,0,n);}finally{input.close();}
+        StringBuilder s=new StringBuilder();for(byte b:digest.digest()){s.append(Character.forDigit((b>>>4)&15,16));s.append(Character.forDigit(b&15,16));}
+        return EXPECTED.equals(s.toString());
+    }
+    public static synchronized File load(Context context)throws Exception{
+        File directory=new File(context.getFilesDir(),"server-runtime");
+        if(!directory.isDirectory()&&!directory.mkdirs())throw new IOException("runtime_cache_create");
+        File target=new File(directory,"bootstrap.bin");if(valid(target))return target;
+        File temporary=File.createTempFile("icon-runtime-",".part",directory);
+        try{
+            InputStream input=context.getAssets().open("bootstrap-icon.bin");
+            try{
+                FileOutputStream output=new FileOutputStream(temporary);
+                try{byte[] b=new byte[16384];int n;long total=0;while((n=input.read(b))!=-1){total+=n;if(total>BUNDLE_SIZE)throw new IOException("runtime_package_size");output.write(b,0,n);}output.getFD().sync();}finally{output.close();}
+            }finally{input.close();}
+            if(!valid(temporary))throw new IOException("runtime_download_digest");
+            if(!temporary.setReadable(false,false)||!temporary.setReadable(true,true)||!temporary.setWritable(false,false))throw new IOException("runtime_cache_permissions");
+            if(!temporary.renameTo(target))throw new IOException("runtime_assets_commit");
+            return target;
+        }finally{if(temporary.exists())temporary.delete();}
+    }
+}

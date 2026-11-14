@@ -1,0 +1,17 @@
+{
+  "changes": [
+    {
+      "attribute": "versionCode",
+      "before": 105,
+      "after": 106
+    },
+    {
+      "attribute": "versionName",
+      "before": "3.5.85-hardened",
+      "after": "3.5.85-icon4"
+    }
+  ],
+  "package_name_preserved": true,
+  "permissions_and_components_preserved": true,
+  "payload_protocol_release": 105
+}
