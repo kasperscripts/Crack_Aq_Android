@@ -1,0 +1,49 @@
+{
+  "runtime_original_sha256": "b8512731dc4aab283fd7b52183427be336c5b2c8ee27b9fc50710e3bb0bed98a",
+  "runtime_patched_sha256": "7b7711b20448724c46b25226adbccc678793448f2942043f5d20eb11d21e974a",
+  "strings": [
+    {
+      "old": 6982446,
+      "new": 103268352,
+      "old_bytes": "t.me/NuarDLC",
+      "new_bytes": "t.me/Icon_Crack",
+      "references": [
+        {
+          "kind": "relocation",
+          "at": 44146464,
+          "new": 103268352
+        }
+      ]
+    },
+    {
+      "old": 7000848,
+      "new": 103268368,
+      "old_bytes": "@NuarDLC",
+      "new_bytes": "@Icon_Crack",
+      "references": [
+        {
+          "kind": "relocation",
+          "at": 44146480,
+          "new": 103268368
+        }
+      ]
+    },
+    {
+      "old": 7019051,
+      "new": 103268384,
+      "old_bytes": "nuar.cc · @NuarDLC",
+      "new_bytes": "nuar.cc · @Icon_Crack",
+      "references": [
+        {
+          "kind": "instruction",
+          "at": 41495764,
+          "add": 41495768,
+          "new": 103268384
+        }
+      ]
+    }
+  ],
+  "changed_instructions": 2,
+  "length_instructions": [],
+  "game_functions_preserved_except_literal_references": true
+}

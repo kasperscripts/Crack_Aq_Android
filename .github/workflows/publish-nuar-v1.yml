@@ -1,0 +1,79 @@
+name: Verify and publish Nuar Icon Crack v1
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Direct URL of the pinned original ZIP
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download and verify the pinned original ZIP and APK
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          python3 - <<'PY'
+          import os,hashlib,zipfile,urllib.request,shutil
+          from pathlib import Path
+          Path('work').mkdir();url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          p=Path('work/source.zip')
+          with urllib.request.urlopen(url,timeout=240) as src,p.open('wb') as dst:shutil.copyfileobj(src,dst,1048576)
+          with p.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()=='4896d5ddcd3dab09a0376f32e08d6b1fa0628aafed061fc72f7abd34079c3487'
+          with zipfile.ZipFile(p) as z:
+              names=z.namelist();assert names==['Nuar_Standoff2_1.1.0_V4.apk']
+              with z.open(names[0]) as src,Path('work/Nuar_Icon_Crack.apk').open('wb') as dst:shutil.copyfileobj(src,dst,1048576)
+          p.unlink()
+          PY
+      - name: Reconstruct the signed APK
+        run: |
+          python3 -m pip install --quiet bsdiff4==1.2.6
+          python3 nuar/v1/apply_patch.py work/Nuar_Icon_Crack.apk artifacts/nuar-icon-crack-v1.patch
+      - name: Check CRCs, Android signatures and package
+        run: |
+          python3 - <<'PY'
+          import os,subprocess,zipfile
+          from pathlib import Path
+          p='work/Nuar_Icon_Crack.apk'
+          with zipfile.ZipFile(p) as z:assert z.testzip() is None
+          tool=sorted((Path(os.environ['ANDROID_HOME'])/'build-tools').glob('*/apksigner'))[-1]
+          result=subprocess.run([str(tool),'verify','--min-sdk-version','21','--verbose','--print-certs',p],check=True,capture_output=True,text=True)
+          print(result.stdout)
+          assert '1e08a903aef9c3a721510b64ec764d01d3d094eb954161b62544ea8f187b5953' in result.stdout
+          for scheme in ['v1 scheme (JAR signing)','v2 scheme (APK Signature Scheme v2)','v3 scheme (APK Signature Scheme v3)']:
+              assert 'Verified using '+scheme+': true' in result.stdout
+          subprocess.run([str(tool.parent/'zipalign'),'-c','-P','16','4',p],check=True)
+          result=subprocess.run([str(tool.parent/'aapt'),'dump','badging',p],check=True,capture_output=True,text=True)
+          assert "name='com.axlebolt.standoff2.huawei' versionCode='3982'" in result.stdout
+          PY
+      - name: Package and verify one standard ZIP
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib,json
+          zipfile.ZIP64_LIMIT=0xffffffff
+          p=Path('work/Nuar_Icon_Crack_v1.zip')
+          with zipfile.ZipFile(p,'w',zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=False) as z:z.write('work/Nuar_Icon_Crack.apk','Nuar_Icon_Crack.apk')
+          assert p.stat().st_size<2*1024**3
+          with zipfile.ZipFile(p) as z:assert z.testzip() is None
+          with p.open('rb') as f:digest=hashlib.file_digest(f,'sha256').hexdigest()
+          Path('work/SHA256SUMS.txt').write_text(digest+'  '+p.name+'\n')
+          Path('work/archive-verification.json').write_text(json.dumps({'size':p.stat().st_size,'sha256':digest,'single_part':True,'zip64':False,'crc_verified':True},indent=2)+'\n')
+          print('Verified ZIP',p.stat().st_size,digest)
+          PY
+      - name: Publish verified files
+        run: |
+          gh release upload nuar-icon-crack-v1 work/Nuar_Icon_Crack_v1.zip work/SHA256SUMS.txt work/archive-verification.json nuar/v1/apk-verification.json --clobber
+          gh release edit nuar-icon-crack-v1 --draft=false --prerelease --title 'Nuar Standoff 2 — @Icon_Crack v1' --notes-file nuar/v1/release-notes.md

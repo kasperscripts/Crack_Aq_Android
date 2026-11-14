@@ -1,0 +1,23 @@
+{
+  "source_size": 2260734959,
+  "source_sha256": "695fd8a9936aff9e004672cca4a5630f65f4e808b82c6a1e16d075fdac915280",
+  "target_size": 2284577979,
+  "target_sha256": "ef45542f0ee66b4b91238cc64780ecbe34a1e3ee9d70ee8d9e11fba3ca34f99a",
+  "package": "com.axlebolt.standoff2.huawei",
+  "version_code": 3982,
+  "active_zip_entries": 3466,
+  "key": "@Icon_Crack",
+  "telegram": "https://t.me/Icon_Crack",
+  "activation": "alias_for_supplied_original_server_license",
+  "original_server_exchange_result": 1,
+  "original_runtime_constructors_passed": 46,
+  "assembled_dex_alias_test_passed": true,
+  "phone_tested": false,
+  "signature_schemes": [
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "patch_size": 68802095,
+  "patch_sha256": "68e4528185d5d455ec7aaba0b87408a19efb9c1a5d1a3332650bcbe8b3bc92c8"
+}
