@@ -1,0 +1,59 @@
+{
+  "filename": "Phantom_3.5.85_Icon_Crack_v3.apk",
+  "size": 4604918,
+  "sha256": "9d263ea3bfea7b259fb625de9d95cde5dae28392aa6a8353f8096449cbf0e62d",
+  "source_sha256": "40cf9a2c70aaabad8eb9f4f90672bbeca45b5fa0feb34d542312bd03e052c0da",
+  "package": "dev.secret.oxide",
+  "version_name": "3.5.85-hardened",
+  "version_code": 105,
+  "modified_original_entries": [
+    "classes.dex",
+    "lib/arm64-v8a/liboxide_auth_bootstrap.so"
+  ],
+  "new_entries": [
+    "assets/bootstrap-icon.bin"
+  ],
+  "entry_sha256": {
+    "META-INF/com/android/build/gradle/app-metadata.properties": "7dcf130d4874270e450dec50649304c0f56f8c866e2bd002530aa66413d88c2d",
+    "META-INF/version-control-info.textproto": "38d377afa76b6364e5bf551cf4ffec1a881a46102a0047f523fbf148e0df6928",
+    "classes.dex": "d55550165b388fb74a8039383a2f5206489f6b58569d224b5d3d125e1d01ab0b",
+    "lib/arm64-v8a/liboxide_auth_bootstrap.so": "98c9013213b5be2be291d2f35336036e15c46c6483dd89157dc220272acde27b",
+    "lib/arm64-v8a/liboxide_injector.so": "ead6fd232470311573d040df8749d294c80607bae9f72f5ccd1bc58ad047af6b",
+    "lib/arm64-v8a/liboxide_loader_guard.so": "24113c9c6c8843445a9008305f497876300fc85ac98a671b08e76b708d960462",
+    "lib/arm64-v8a/liboxide_lulu_bootstrap.so": "902671f102ad8bcca4399246362505f1809399f8d21486e12f450b1866450eef",
+    "lib/arm64-v8a/liboxide_lulu_probe.so": "8239a3fb1cf510faedc4d90490febfc65c2139ab4edb63bd3dc5dd3d017d7d39",
+    "META-INF/MONOCYPHER-LICENSE.txt": "5f8360e4c06ddcc584bdb4b210c6af824c4bb301e6a9a521869b6d90795ca4b3",
+    "AndroidManifest.xml": "d97c3fef5b83e98bc5d959e7764e6dd74d974a9c2ae2c7908dfbfe4894cb4651",
+    "res/A5.xml": "b1eece3d6904f27df96fc6e8223274bd4f23481c68af814fa4d55f7a968fbfba",
+    "resources.arsc": "e0d9670f75b9b0064cbf0f998af80281e0dc2cfb87f7d85c1d9bf0adb76bea7e",
+    "assets/bootstrap-icon.bin": "51876805e15a81f7f3d0d00696b71623577b1ed81d42fa3a1d34c0ae559c6ca9"
+  },
+  "apk_signature_v2": true,
+  "apk_signature_v3": true,
+  "certificate_sha256": "1e08a903aef9c3a721510b64ec764d01d3d094eb954161b62544ea8f187b5953",
+  "zipalign_16k": true,
+  "device_execution_tested": false,
+  "key": "@Icon_Crack",
+  "caption": "@Icon_Crack бонпай гей",
+  "telegram_url": "https://t.me/Icon_Crack",
+  "profiles": "local persistent storage",
+  "source_license_embedded": false,
+  "patch_revision": 3,
+  "modified_entries_from_v1": [
+    "classes.dex",
+    "assets/bootstrap-icon.bin"
+  ],
+  "base_v1_sha256": "fa35805b00f3d2e7259d23c07280d8dfd1e6394ec06adf37746a65bd99952ec6",
+  "menu_initial_reveal": true,
+  "counter_tap_toggles_menu": true,
+  "profile_context_order_fixed": true,
+  "ui_dex_limit_bytes": 2097152,
+  "modified_entries_from_v2": [
+    "classes.dex",
+    "assets/bootstrap-icon.bin"
+  ],
+  "base_v2_sha256": "b31e0fe019145ab6da5aae6c65f63563142dc1fb391baeefd6e7b5a836645c28",
+  "native_binaries_unchanged_from_v2": true,
+  "native_sha512_proof_field_fixed": true,
+  "native_load_payload_transition_verified": true
+}

@@ -1,0 +1,11 @@
+{
+  "mode": "root",
+  "actual_native_load_payload_executed": true,
+  "native_signature_checks_preserved": true,
+  "memfd_bytes_and_seals_verified": true,
+  "native_sha512_gate_passed": true,
+  "jni_vm_and_directory_handoff_verified": true,
+  "android_dynamic_loader_stubbed": true,
+  "game_worker_stubbed_in_this_test": true,
+  "device_tested": false
+}

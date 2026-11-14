@@ -1,0 +1,35 @@
+name: Publish Phantom 3.5.85 Icon Crack v3
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Verify exact APK and Android signature
+        run: |
+          python3 phantom385/v3/verify_release.py artifacts/Phantom_3.5.85_Icon_Crack_v3.apk
+          python3 - <<'PY'
+          import os, pathlib, subprocess
+          candidates=sorted(pathlib.Path(os.environ['ANDROID_HOME']).glob('build-tools/*/apksigner'))
+          assert candidates, 'Android build tools unavailable'
+          directory=candidates[-1].parent
+          apk='artifacts/Phantom_3.5.85_Icon_Crack_v3.apk'
+          result=subprocess.run([str(directory/'apksigner'),'verify','--verbose','--print-certs',apk],check=True,capture_output=True,text=True)
+          print(result.stdout)
+          assert '1e08a903aef9c3a721510b64ec764d01d3d094eb954161b62544ea8f187b5953' in result.stdout
+          assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in result.stdout
+          assert 'Verified using v3 scheme (APK Signature Scheme v3): true' in result.stdout
+          subprocess.run([str(directory/'zipalign'),'-c','-P','16','4',apk],check=True)
+          PY
+      - name: Upload verified APK and publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload phantom-3.5.85-icon-crack-v3 artifacts/Phantom_3.5.85_Icon_Crack_v3.apk phantom385/v3/SHA256SUMS phantom385/v3/release-verification.json phantom385/v3/native-diff-verification.json phantom385/v3/container-verification.json phantom385/v3/local-auth-host-verification.json phantom385/v3/runtime-cache-verification.json --clobber
+          gh release edit phantom-3.5.85-icon-crack-v3 --draft=false --prerelease --title 'Phantom 3.5.85 — @Icon_Crack v3' --notes-file phantom385/v3/release-notes.md

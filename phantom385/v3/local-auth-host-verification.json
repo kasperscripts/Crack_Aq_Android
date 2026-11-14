@@ -1,0 +1,14 @@
+{
+  "rfc8032_vector": true,
+  "signed_proof": true,
+  "root_and_nonroot": true,
+  "trimmed_key": true,
+  "wrong_keys_rejected": true,
+  "session_refresh": true,
+  "wrong_tokens_rejected": true,
+  "payload_decryption_and_digest": true,
+  "profile_save_load_delete": true,
+  "profile_persistence": true,
+  "profile_revision_conflicts": true,
+  "native_sha512_proof_binding": true
+}

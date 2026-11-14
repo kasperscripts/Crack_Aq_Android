@@ -1,0 +1,8 @@
+{
+  "actual_native_sealed_file_checker_executed": true,
+  "correct_file_accepted": true,
+  "changed_file_rejected": true,
+  "proof_sha512_offset": 232,
+  "sha512_matches_payload": true,
+  "native_checker_modified": false
+}

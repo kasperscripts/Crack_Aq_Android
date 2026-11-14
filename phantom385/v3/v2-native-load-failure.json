@@ -1,0 +1,7 @@
+{
+  "actual_native_load_payload_executed": true,
+  "activation_accepted": true,
+  "exception": "payload_native_digest_mismatch",
+  "android_loader_reached": false,
+  "missing_sha512_binding": true
+}
