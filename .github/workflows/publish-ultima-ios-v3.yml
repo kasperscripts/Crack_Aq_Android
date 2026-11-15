@@ -1,0 +1,39 @@
+name: Build and publish Ultima iOS Icon Crack v3
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Direct URL of the pinned build10 IPA
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      GIT_LFS_SKIP_SMUDGE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download the original IPA
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          python3 - <<'PY'
+          import os,shutil,urllib.request
+          from pathlib import Path
+          Path('work').mkdir(exist_ok=True);url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          with urllib.request.urlopen(url,timeout=240) as src,Path('work/build10-original.ipa').open('wb') as dst:shutil.copyfileobj(src,dst,1048576)
+          PY
+      - name: Compile, sign, package and verify
+        run: python3 ultima/v3/build_release.py
+      - name: Publish the verified IPA
+        run: |
+          gh release upload ultima-ios-icon-crack-v3 work/Ultima_iOS_Icon_Crack_v3.ipa work/ultima-verification.json work/uikit-relay-verification.json work/SHA256SUMS.txt --clobber
+          gh release edit ultima-ios-icon-crack-v3 --draft=false --prerelease --title 'Ultima iOS build10 — @Icon_Crack v3' --notes-file ultima/v3/release-notes.md
