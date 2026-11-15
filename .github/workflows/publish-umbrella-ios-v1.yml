@@ -1,0 +1,40 @@
+name: Build and publish Umbrella iOS Icon Crack
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Direct URL of pinned Umbreladlc IPA
+        type: string
+        required: true
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Download original and install ARM64 test dependencies
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          python3 -m venv work-env
+          work-env/bin/pip install lief==0.17.1 unicorn==2.1.4
+          work-env/bin/python - <<'PY'
+          import os,shutil,urllib.request
+          from pathlib import Path
+          Path('work').mkdir(exist_ok=True);url=os.environ['SOURCE_URL'];print('::add-mask::'+url,flush=True)
+          with urllib.request.urlopen(url,timeout=240) as src,Path('work/original.ipa').open('wb') as dst:shutil.copyfileobj(src,dst,1048576)
+          PY
+      - name: Patch, execute ARM64 key tests, sign and verify
+        run: work-env/bin/python umbrella/ios-v1/build_release.py
+      - name: Publish IPA and checks
+        run: |
+          gh release upload umbrella-ios-icon-crack-v1 work/Umbrella_iOS_Icon_Crack.ipa work/umbrella-verification.json work/activation-verification.json work/SHA256SUMS.txt --clobber
+          gh release edit umbrella-ios-icon-crack-v1 --draft=false --prerelease --title 'Umbrella iOS — @Icon_Crack' --notes-file umbrella/ios-v1/release-notes.md
