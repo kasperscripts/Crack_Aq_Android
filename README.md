@@ -34,3 +34,10 @@
 [Скачать IPA одним файлом](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/umbrella-ios-icon-crack-v1/Umbrella_iOS_Icon_Crack.ipa). Локальный ключ: `@Icon_Crack`. Telegram: https://t.me/Icon_Crack.
 
 Изменены строка сравнения ключа, имя приложения и сообщения активации. Проверены девять сценариев исходной ARM64-функции до и после изменения; игровые данные сохранены. Подпишите полный IPA через ESign. На физическом iPhone сборка не тестировалась. [Подробности](umbrella/ios-v1/release-notes.md).
+
+
+## Ultima build11 — Umbrella Recrack by @Icon_Crack
+
+[Скачать Umbrella_Recrack_by_@Icon_Crack.ipa](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/umbrella-ios-build11-icon-crack-v1/Umbrella_Recrack_by_%40Icon_Crack.ipa). Локальный ключ и Telegram: `@Icon_Crack`.
+
+Обновлены сравнение ключа, имя приложения и сообщения активации. Двенадцать сценариев проверяют исходные ARM64-функции активации и сохранённой сессии до и после изменений. Подпишите полный IPA через ESign. На физическом iPhone сборка не тестировалась. [Подробности](umbrella/ios-build11-v1/release-notes.md).
