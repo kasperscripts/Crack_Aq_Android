@@ -20,3 +20,10 @@
 [Скачать ZIP с одним APK](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/nuar-icon-crack-v1/Nuar_Icon_Crack_v1.zip). Ключ: `@Icon_Crack`. Telegram: https://t.me/Icon_Crack.
 
 Ключ служит локальным именем для исходной серверной лицензии; её срок, привязка и ограничения сохраняются. На телефоне сборка не проверялась. [Изменения и проверки](nuar/v1/release-notes.md).
+
+
+## Ultima iOS build10 — @Icon_Crack
+
+[Скачать один IPA](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/ultima-ios-icon-crack-v1/Ultima_iOS_Icon_Crack.ipa). Ключ и Telegram: `@Icon_Crack`.
+
+Ключ — локальное имя исходной серверной лицензии; её ограничения сохраняются. Для установки нужна повторная подпись в ESign. [Изменения и проверки](ultima/v1/release-notes.md).
