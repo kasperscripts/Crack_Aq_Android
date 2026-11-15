@@ -27,3 +27,10 @@
 [Скачать один IPA](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/ultima-ios-icon-crack-v3/Ultima_iOS_Icon_Crack_v3.ipa). Ключ и Telegram: `@Icon_Crack`.
 
 Ключ — локальное имя исходной серверной лицензии; её ограничения сохраняются. Для установки нужна повторная подпись в ESign. [Изменения и проверки](ultima/v3/release-notes.md).
+
+
+## Umbrella iOS — @Icon_Crack
+
+[Скачать IPA одним файлом](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/umbrella-ios-icon-crack-v1/Umbrella_iOS_Icon_Crack.ipa). Локальный ключ: `@Icon_Crack`. Telegram: https://t.me/Icon_Crack.
+
+Изменены строка сравнения ключа, имя приложения и сообщения активации. Проверены девять сценариев исходной ARM64-функции до и после изменения; игровые данные сохранены. Подпишите полный IPA через ESign. На физическом iPhone сборка не тестировалась. [Подробности](umbrella/ios-v1/release-notes.md).
