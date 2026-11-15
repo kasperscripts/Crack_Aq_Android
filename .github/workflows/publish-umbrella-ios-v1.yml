@@ -25,7 +25,7 @@ jobs:
           SOURCE_URL: ${{ inputs.source_url }}
         run: |
           python3 -m venv work-env
-          work-env/bin/pip install lief==0.17.1 unicorn==2.1.4
+          work-env/bin/pip install lief==0.17.6 unicorn==2.1.4
           work-env/bin/python - <<'PY'
           import os,shutil,urllib.request
           from pathlib import Path
