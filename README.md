@@ -22,8 +22,8 @@
 Ключ служит локальным именем для исходной серверной лицензии; её срок, привязка и ограничения сохраняются. На телефоне сборка не проверялась. [Изменения и проверки](nuar/v1/release-notes.md).
 
 
-## Ultima iOS build10 v2 — @Icon_Crack
+## Ultima iOS build10 v3 — @Icon_Crack
 
-[Скачать один IPA](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/ultima-ios-icon-crack-v2/Ultima_iOS_Icon_Crack_v2.ipa). Ключ и Telegram: `@Icon_Crack`.
+[Скачать один IPA](https://github.com/kasperscripts/Crack_Aq_Android/releases/download/ultima-ios-icon-crack-v3/Ultima_iOS_Icon_Crack_v3.ipa). Ключ и Telegram: `@Icon_Crack`.
 
-Ключ — локальное имя исходной серверной лицензии; её ограничения сохраняются. Для установки нужна повторная подпись в ESign. [Изменения и проверки](ultima/v2/release-notes.md).
+Ключ — локальное имя исходной серверной лицензии; её ограничения сохраняются. Для установки нужна повторная подпись в ESign. [Изменения и проверки](ultima/v3/release-notes.md).
