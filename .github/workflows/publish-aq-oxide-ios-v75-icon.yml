@@ -1,0 +1,31 @@
+name: Publish AQ OXIDE iOS V75 IPA
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-aq-oxide-ios-v75-icon.yml'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      SOURCE_URL: 'https://uc28cbe3f6fa5d77a59db1999915.dl.dropboxusercontent.com/cd/0/get/DMwjsyaqhd_twlRCb5j7Pvyge10laBpi2t9DUwlYvQFWTsTPGEQgsofsaNwW9EVEK-08LBEWHtYY1S0ilHXcQo_LIkxNZpIP7ajmoZqHKfvWQZIJX8wJ7uOpCH48QNyf6krluha_dVyYIFl3CYCDeqG9KtMf3ywKlBs3ZRWQ-9Jz3w/file?c_luid=c030f781'
+      FILE: AQ-OXIDE-IOS-V75-Icon-Crack-unsigned.ipa
+    steps:
+      - name: Download and verify the unchanged IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '::add-mask::%s\n' "$SOURCE_URL"
+          curl --fail --location --silent --show-error --max-time 600 --output "$FILE" "$SOURCE_URL"
+          printf '%s  %s\n' '4c81351cc9501b107dd3249535e05e9d60fc77835c9f57ace49063c4b3221ca3' "$FILE" | sha256sum --check
+          test "$(stat -c %s "$FILE")" = 530391467
+      - name: Publish IPA as a release asset
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create aq-oxide-ios-v75-icon-crack "$FILE" --target main --title 'AQ OXIDE iOS V75 — @Icon_Crack' --notes 'Готовый IPA без дополнительного архива и без изменений при переносе. Локальный ключ: @Icon_Crack. Для установки требуется переподпись. Код активации проверен в эмуляции; запуск на физическом iPhone не проверялся. SHA-256: 4c81351cc9501b107dd3249535e05e9d60fc77835c9f57ace49063c4b3221ca3.'
